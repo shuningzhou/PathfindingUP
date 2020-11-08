@@ -17,9 +17,6 @@ namespace Parallel.Pathfinding
 
         Fix64Vec3 _destination;
         PNavMeshPath _path;
-        public Fix64Vec3 _nextCorner;
-        public int _nextPolygonIndex = -1;
-        public Fix64 distanceToNextCorner;
 
         public bool debug = false;
 
@@ -42,6 +39,12 @@ namespace Parallel.Pathfinding
             {
                 return;
             }
+
+            if(_path == null)
+            {
+                return;
+            }
+
             /*
             if (_nextCorner != Fix64Vec3.zero)
             {

@@ -1163,14 +1163,7 @@ MonoBehaviour:
   stopDistance:
     Raw: 104857
   width:
-    Raw: 104857
-  _nextCorner:
-    RawX: 0
-    RawY: 0
-    RawZ: 0
-  _nextPolygonIndex: -1
-  distanceToNextCorner:
-    Raw: 0
+    Raw: 1048576
   debug: 1
   _waypoints: []
 --- !u!114 &1029187142
