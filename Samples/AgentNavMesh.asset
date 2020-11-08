@@ -1,0 +1,6535 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5aa0f2c7095b34b9d83441cee51b16, type: 3}
+  m_Name: AgentNavMesh
+  m_EditorClassIdentifier: 
+  saved: 1
+  gridSize:
+    RawX: 262144
+    RawY: 262144
+    RawZ: 262144
+  floorLevel:
+    Raw: 0
+  ceilingLevel:
+    Raw: 10485760
+  verticalDrop: 1
+  worldLowerBound:
+    RawX: -26340229
+    RawY: 0
+    RawZ: -26424115
+  worldUpperBound:
+    RawX: 28143255
+    RawY: 3879731
+    RawZ: 27671921
+  islands:
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 65
+    indicsCount: 261
+    graph:
+      polygons:
+      - verts:
+        - RawX: -4975493
+          RawY: -3486515
+        - RawX: -1829765
+          RawY: -7418675
+        - RawX: -1305477
+          RawY: -7942963
+        - RawX: 5248123
+          RawY: -8205107
+        - RawX: 7345275
+          RawY: -8205107
+        - RawX: 8131707
+          RawY: -3224371
+        - RawX: 7607419
+          RawY: -2700083
+        - RawX: -1567621
+          RawY: 3329229
+        - RawX: -2091909
+          RawY: 3329229
+        edges:
+        - pointA:
+            RawX: -4975493
+            RawY: -3486515
+          pointB:
+            RawX: -1829765
+            RawY: -7418675
+          selfPolygonIndex: 0
+          otherPolygonIndex: 23
+          distance:
+            Raw: 6014672
+          width:
+            Raw: 5035620
+          hasOther: 1
+        - pointA:
+            RawX: -1829765
+            RawY: -7418675
+          pointB:
+            RawX: -1305477
+            RawY: -7942963
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -1305477
+            RawY: -7942963
+          pointB:
+            RawX: 5248123
+            RawY: -8205107
+          selfPolygonIndex: 0
+          otherPolygonIndex: 7
+          distance:
+            Raw: 6389748
+          width:
+            Raw: 6558840
+          hasOther: 1
+        - pointA:
+            RawX: 5248123
+            RawY: -8205107
+          pointB:
+            RawX: 7345275
+            RawY: -8205107
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 2097152
+          hasOther: 0
+        - pointA:
+            RawX: 7345275
+            RawY: -8205107
+          pointB:
+            RawX: 8131707
+            RawY: -3224371
+          selfPolygonIndex: 0
+          otherPolygonIndex: 63
+          distance:
+            Raw: 8296424
+          width:
+            Raw: 5042440
+          hasOther: 1
+        - pointA:
+            RawX: 8131707
+            RawY: -3224371
+          pointB:
+            RawX: 7607419
+            RawY: -2700083
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 7607419
+            RawY: -2700083
+          pointB:
+            RawX: -1567621
+            RawY: 3329229
+          selfPolygonIndex: 0
+          otherPolygonIndex: 52
+          distance:
+            Raw: 5002248
+          width:
+            Raw: 10978792
+          hasOther: 1
+        - pointA:
+            RawX: -1567621
+            RawY: 3329229
+          pointB:
+            RawX: -2091909
+            RawY: 3329229
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 524288
+          hasOther: 0
+        - pointA:
+            RawX: -2091909
+            RawY: 3329229
+          pointB:
+            RawX: -4975493
+            RawY: -3486515
+          selfPolygonIndex: 0
+          otherPolygonIndex: 62
+          distance:
+            Raw: 6120844
+          width:
+            Raw: 7400636
+          hasOther: 1
+        centroid:
+          RawX: 1451750
+          RawY: -3416006
+        normal:
+        - RawX: -818798
+          RawY: -655038
+        - RawX: -741455
+          RawY: -741455
+        - RawX: -41910
+          RawY: -1047738
+        - RawX: 0
+          RawY: -1048576
+        - RawX: 1035742
+          RawY: -163539
+        - RawX: 741455
+          RawY: 741455
+        - RawX: 575851
+          RawY: 876295
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -965699
+          RawY: 408564
+        vertsCount: 9
+        index: 0
+      - verts:
+        - RawX: 21763195
+          RawY: 3591373
+        - RawX: 16520315
+          RawY: 3591373
+        - RawX: 13898875
+          RawY: 2542797
+        - RawX: 13898875
+          RawY: -2700083
+        edges:
+        - pointA:
+            RawX: 21763195
+            RawY: 3591373
+          pointB:
+            RawX: 16520315
+            RawY: 3591373
+          selfPolygonIndex: 1
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 16520315
+            RawY: 3591373
+          pointB:
+            RawX: 13898875
+            RawY: 2542797
+          selfPolygonIndex: 1
+          otherPolygonIndex: 12
+          distance:
+            Raw: 2561682
+          width:
+            Raw: 2823376
+          hasOther: 1
+        - pointA:
+            RawX: 13898875
+            RawY: 2542797
+          pointB:
+            RawX: 13898875
+            RawY: -2700083
+          selfPolygonIndex: 1
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 13898875
+            RawY: -2700083
+          pointB:
+            RawX: 21763195
+            RawY: 3591373
+          selfPolygonIndex: 1
+          otherPolygonIndex: 64
+          distance:
+            Raw: 2186768
+          width:
+            Raw: 10071240
+          hasOther: 1
+        centroid:
+          RawX: 16622841
+          RawY: 1391396
+        normal:
+        - RawX: 0
+          RawY: 1048575
+        - RawX: -389431
+          RawY: 973577
+        - RawX: -1048575
+          RawY: 0
+        - RawX: 655038
+          RawY: -818798
+        vertsCount: 4
+        index: 1
+      - verts:
+        - RawX: 22549627
+          RawY: -14234419
+        - RawX: 22549627
+          RawY: -19477299
+        - RawX: 25957499
+          RawY: -26030899
+        - RawX: 25957499
+          RawY: 20368589
+        edges:
+        - pointA:
+            RawX: 22549627
+            RawY: -14234419
+          pointB:
+            RawX: 22549627
+            RawY: -19477299
+          selfPolygonIndex: 2
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 22549627
+            RawY: -19477299
+          pointB:
+            RawX: 25957499
+            RawY: -26030899
+          selfPolygonIndex: 2
+          otherPolygonIndex: 13
+          distance:
+            Raw: 13907368
+          width:
+            Raw: 7386692
+          hasOther: 1
+        - pointA:
+            RawX: 25957499
+            RawY: -26030899
+          pointB:
+            RawX: 25957499
+            RawY: 20368589
+          selfPolygonIndex: 2
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 46399488
+          hasOther: 0
+        - pointA:
+            RawX: 25957499
+            RawY: 20368589
+          pointB:
+            RawX: 22549627
+            RawY: -14234419
+          selfPolygonIndex: 2
+          otherPolygonIndex: 3
+          distance:
+            Raw: 13111272
+          width:
+            Raw: 34770400
+          hasOther: 1
+        centroid:
+          RawX: 24706036
+          RawY: -7980608
+        normal:
+        - RawX: -1048575
+          RawY: 0
+        - RawX: -930313
+          RawY: -483763
+        - RawX: 1048548
+          RawY: 0
+        - RawX: -1043526
+          RawY: 102771
+        vertsCount: 4
+        index: 2
+      - verts:
+        - RawX: 22549627
+          RawY: -14234419
+        - RawX: 25957499
+          RawY: 20368589
+        - RawX: 22287483
+          RawY: 9358541
+        - RawX: 22287483
+          RawY: 4115661
+        edges:
+        - pointA:
+            RawX: 25957499
+            RawY: 20368589
+          pointB:
+            RawX: 22549627
+            RawY: -14234419
+          selfPolygonIndex: 3
+          otherPolygonIndex: 2
+          distance:
+            Raw: 13111272
+          width:
+            Raw: 34770400
+          hasOther: 1
+        - pointA:
+            RawX: 25957499
+            RawY: 20368589
+          pointB:
+            RawX: 22287483
+            RawY: 9358541
+          selfPolygonIndex: 3
+          otherPolygonIndex: 9
+          distance:
+            Raw: 8124756
+          width:
+            Raw: 11605608
+          hasOther: 1
+        - pointA:
+            RawX: 22287483
+            RawY: 9358541
+          pointB:
+            RawX: 22287483
+            RawY: 4115661
+          selfPolygonIndex: 3
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 22287483
+            RawY: 4115661
+          pointB:
+            RawX: 22549627
+            RawY: -14234419
+          selfPolygonIndex: 3
+          otherPolygonIndex: 6
+          distance:
+            Raw: 10197288
+          width:
+            Raw: 18351952
+          hasOther: 1
+        centroid:
+          RawX: 23579143
+          RawY: 5082156
+        normal:
+        - RawX: 1043526
+          RawY: -102772
+        - RawX: -994760
+          RawY: 331586
+        - RawX: -1048575
+          RawY: 0
+        - RawX: -1048460
+          RawY: -14978
+        vertsCount: 4
+        index: 3
+      - verts:
+        - RawX: 16782459
+          RawY: -13710131
+        - RawX: 22025339
+          RawY: -13710131
+        - RawX: 21763195
+          RawY: 3591373
+        - RawX: 7869563
+          RawY: -8729395
+        - RawX: 7869563
+          RawY: -11088691
+        edges:
+        - pointA:
+            RawX: 16782459
+            RawY: -13710131
+          pointB:
+            RawX: 22025339
+            RawY: -13710131
+          selfPolygonIndex: 4
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 22025339
+            RawY: -13710131
+          pointB:
+            RawX: 21763195
+            RawY: 3591373
+          selfPolygonIndex: 4
+          otherPolygonIndex: 6
+          distance:
+            Raw: 5948196
+          width:
+            Raw: 17303488
+          hasOther: 1
+        - pointA:
+            RawX: 21763195
+            RawY: 3591373
+          pointB:
+            RawX: 7869563
+            RawY: -8729395
+          selfPolygonIndex: 4
+          otherPolygonIndex: 25
+          distance:
+            Raw: 5039488
+          width:
+            Raw: 18569712
+          hasOther: 1
+        - pointA:
+            RawX: 7869563
+            RawY: -8729395
+          pointB:
+            RawX: 7869563
+            RawY: -11088691
+          selfPolygonIndex: 4
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 2359294
+          hasOther: 0
+        - pointA:
+            RawX: 7869563
+            RawY: -11088691
+          pointB:
+            RawX: 16782459
+            RawY: -13710131
+          selfPolygonIndex: 4
+          otherPolygonIndex: 8
+          distance:
+            Raw: 8898320
+          width:
+            Raw: 9290400
+          hasOther: 1
+        centroid:
+          RawX: 16607609
+          RawY: -7154028
+        normal:
+        - RawX: 0
+          RawY: -1048575
+        - RawX: 1048443
+          RawY: 15885
+        - RawX: -695706
+          RawY: 784519
+        - RawX: -1048577
+          RawY: 0
+        - RawX: -295873
+          RawY: -1005967
+        vertsCount: 5
+        index: 4
+      - verts:
+        - RawX: -12577669
+          RawY: 9096397
+        - RawX: -13101957
+          RawY: 9620685
+        - RawX: -16509829
+          RawY: 9358541
+        - RawX: -16509829
+          RawY: 4115661
+        edges:
+        - pointA:
+            RawX: -12577669
+            RawY: 9096397
+          pointB:
+            RawX: -13101957
+            RawY: 9620685
+          selfPolygonIndex: 5
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -13101957
+            RawY: 9620685
+          pointB:
+            RawX: -16509829
+            RawY: 9358541
+          selfPolygonIndex: 5
+          otherPolygonIndex: 26
+          distance:
+            Raw: 7286824
+          width:
+            Raw: 3417938
+          hasOther: 1
+        - pointA:
+            RawX: -16509829
+            RawY: 9358541
+          pointB:
+            RawX: -16509829
+            RawY: 4115661
+          selfPolygonIndex: 5
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -16509829
+            RawY: 4115661
+          pointB:
+            RawX: -12577669
+            RawY: 9096397
+          selfPolygonIndex: 5
+          otherPolygonIndex: 53
+          distance:
+            Raw: 5606116
+          width:
+            Raw: 6345832
+          hasOther: 1
+        centroid:
+          RawX: -15102100
+          RawY: 7680160
+        normal:
+        - RawX: 741455
+          RawY: 741455
+        - RawX: -80422
+          RawY: 1045486
+        - RawX: -1048575
+          RawY: 0
+        - RawX: 823008
+          RawY: -649744
+        vertsCount: 4
+        index: 5
+      - verts:
+        - RawX: 22025339
+          RawY: -13710131
+        - RawX: 22549627
+          RawY: -14234419
+        - RawX: 22287483
+          RawY: 4115661
+        - RawX: 21763195
+          RawY: 3591373
+        edges:
+        - pointA:
+            RawX: 22025339
+            RawY: -13710131
+          pointB:
+            RawX: 22549627
+            RawY: -14234419
+          selfPolygonIndex: 6
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 22287483
+            RawY: 4115661
+          pointB:
+            RawX: 22549627
+            RawY: -14234419
+          selfPolygonIndex: 6
+          otherPolygonIndex: 3
+          distance:
+            Raw: 10197288
+          width:
+            Raw: 18351952
+          hasOther: 1
+        - pointA:
+            RawX: 22287483
+            RawY: 4115661
+          pointB:
+            RawX: 21763195
+            RawY: 3591373
+          selfPolygonIndex: 6
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 22025339
+            RawY: -13710131
+          pointB:
+            RawX: 21763195
+            RawY: 3591373
+          selfPolygonIndex: 6
+          otherPolygonIndex: 4
+          distance:
+            Raw: 5948196
+          width:
+            Raw: 17303488
+          hasOther: 1
+        centroid:
+          RawX: 22158139
+          RawY: -5015643
+        normal:
+        - RawX: -741455
+          RawY: -741455
+        - RawX: 1048460
+          RawY: 14978
+        - RawX: -741455
+          RawY: 741455
+        - RawX: -1048443
+          RawY: -15886
+        vertsCount: 4
+        index: 6
+      - verts:
+        - RawX: 4723835
+          RawY: -8729395
+        - RawX: 5248123
+          RawY: -8205107
+        - RawX: -1305477
+          RawY: -7942963
+        - RawX: -1305477
+          RawY: -13185843
+        edges:
+        - pointA:
+            RawX: 4723835
+            RawY: -8729395
+          pointB:
+            RawX: 5248123
+            RawY: -8205107
+          selfPolygonIndex: 7
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -1305477
+            RawY: -7942963
+          pointB:
+            RawX: 5248123
+            RawY: -8205107
+          selfPolygonIndex: 7
+          otherPolygonIndex: 0
+          distance:
+            Raw: 6389748
+          width:
+            Raw: 6558840
+          hasOther: 1
+        - pointA:
+            RawX: -1305477
+            RawY: -7942963
+          pointB:
+            RawX: -1305477
+            RawY: -13185843
+          selfPolygonIndex: 7
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -1305477
+            RawY: -13185843
+          pointB:
+            RawX: 4723835
+            RawY: -8729395
+          selfPolygonIndex: 7
+          otherPolygonIndex: 16
+          distance:
+            Raw: 2162862
+          width:
+            Raw: 7497500
+          hasOther: 1
+        centroid:
+          RawX: 926158
+          RawY: -9784103
+        normal:
+        - RawX: 741455
+          RawY: -741455
+        - RawX: 41909
+          RawY: 1047737
+        - RawX: -1048575
+          RawY: 0
+        - RawX: 623262
+          RawY: -843238
+        vertsCount: 4
+        index: 7
+      - verts:
+        - RawX: 8918139
+          RawY: -17118003
+        - RawX: 9442427
+          RawY: -17642291
+        - RawX: 16258171
+          RawY: -14234419
+        - RawX: 16782459
+          RawY: -13710131
+        - RawX: 7869563
+          RawY: -11088691
+        - RawX: 7345275
+          RawY: -11612979
+        edges:
+        - pointA:
+            RawX: 8918139
+            RawY: -17118003
+          pointB:
+            RawX: 9442427
+            RawY: -17642291
+          selfPolygonIndex: 8
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 9442427
+            RawY: -17642291
+          pointB:
+            RawX: 16258171
+            RawY: -14234419
+          selfPolygonIndex: 8
+          otherPolygonIndex: 14
+          distance:
+            Raw: 4709080
+          width:
+            Raw: 7620232
+          hasOther: 1
+        - pointA:
+            RawX: 16258171
+            RawY: -14234419
+          pointB:
+            RawX: 16782459
+            RawY: -13710131
+          selfPolygonIndex: 8
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 7869563
+            RawY: -11088691
+          pointB:
+            RawX: 16782459
+            RawY: -13710131
+          selfPolygonIndex: 8
+          otherPolygonIndex: 4
+          distance:
+            Raw: 8898320
+          width:
+            Raw: 9290400
+          hasOther: 1
+        - pointA:
+            RawX: 7869563
+            RawY: -11088691
+          pointB:
+            RawX: 7345275
+            RawY: -11612979
+          selfPolygonIndex: 8
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 7345275
+            RawY: -11612979
+          pointB:
+            RawX: 8918139
+            RawY: -17118003
+          selfPolygonIndex: 8
+          otherPolygonIndex: 15
+          distance:
+            Raw: 6550996
+          width:
+            Raw: 5725308
+          hasOther: 1
+        centroid:
+          RawX: 11137621
+          RawY: -14172535
+        normal:
+        - RawX: -741455
+          RawY: -741455
+        - RawX: 468936
+          RawY: -937872
+        - RawX: 741455
+          RawY: -741455
+        - RawX: 295872
+          RawY: 1005966
+        - RawX: -741455
+          RawY: 741455
+        - RawX: -1008231
+          RawY: -288066
+        vertsCount: 6
+        index: 8
+      - verts:
+        - RawX: 21763195
+          RawY: 9882829
+        - RawX: 22287483
+          RawY: 9358541
+        - RawX: 25957499
+          RawY: 20368589
+        edges:
+        - pointA:
+            RawX: 21763195
+            RawY: 9882829
+          pointB:
+            RawX: 22287483
+            RawY: 9358541
+          selfPolygonIndex: 9
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 25957499
+            RawY: 20368589
+          pointB:
+            RawX: 22287483
+            RawY: 9358541
+          selfPolygonIndex: 9
+          otherPolygonIndex: 3
+          distance:
+            Raw: 8124756
+          width:
+            Raw: 11605608
+          hasOther: 1
+        - pointA:
+            RawX: 25957499
+            RawY: 20368589
+          pointB:
+            RawX: 21763195
+            RawY: 9882829
+          selfPolygonIndex: 9
+          otherPolygonIndex: 10
+          distance:
+            Raw: 5122692
+          width:
+            Raw: 11293504
+          hasOther: 1
+        centroid:
+          RawX: 23335978
+          RawY: 13203274
+        normal:
+        - RawX: -741455
+          RawY: -741455
+        - RawX: 994759
+          RawY: -331587
+        - RawX: -973570
+          RawY: 389428
+        vertsCount: 3
+        index: 9
+      - verts:
+        - RawX: 21763195
+          RawY: 9882829
+        - RawX: 25957499
+          RawY: 20368589
+        - RawX: 9442427
+          RawY: 16174285
+        - RawX: 9966715
+          RawY: 15649997
+        - RawX: 16520315
+          RawY: 9882829
+        edges:
+        - pointA:
+            RawX: 25957499
+            RawY: 20368589
+          pointB:
+            RawX: 21763195
+            RawY: 9882829
+          selfPolygonIndex: 10
+          otherPolygonIndex: 9
+          distance:
+            Raw: 5122692
+          width:
+            Raw: 11293504
+          hasOther: 1
+        - pointA:
+            RawX: 25957499
+            RawY: 20368589
+          pointB:
+            RawX: 9442427
+            RawY: 16174285
+          selfPolygonIndex: 10
+          otherPolygonIndex: 37
+          distance:
+            Raw: 10252568
+          width:
+            Raw: 17039344
+          hasOther: 1
+        - pointA:
+            RawX: 9442427
+            RawY: 16174285
+          pointB:
+            RawX: 9966715
+            RawY: 15649997
+          selfPolygonIndex: 10
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 9966715
+            RawY: 15649997
+          pointB:
+            RawX: 16520315
+            RawY: 9882829
+          selfPolygonIndex: 10
+          otherPolygonIndex: 11
+          distance:
+            Raw: 6491728
+          width:
+            Raw: 8729824
+          hasOther: 1
+        - pointA:
+            RawX: 16520315
+            RawY: 9882829
+          pointB:
+            RawX: 21763195
+            RawY: 9882829
+          selfPolygonIndex: 10
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        centroid:
+          RawX: 18488911
+          RawY: 14860961
+        normal:
+        - RawX: 973570
+          RawY: -389428
+        - RawX: -258108
+          RawY: 1016300
+        - RawX: -741455
+          RawY: -741455
+        - RawX: -692714
+          RawY: -787175
+        - RawX: 0
+          RawY: -1048575
+        vertsCount: 5
+        index: 10
+      - verts:
+        - RawX: 16520315
+          RawY: 9882829
+        - RawX: 9966715
+          RawY: 15649997
+        - RawX: 9966715
+          RawY: 12504269
+        - RawX: 15996027
+          RawY: 9358541
+        edges:
+        - pointA:
+            RawX: 9966715
+            RawY: 15649997
+          pointB:
+            RawX: 16520315
+            RawY: 9882829
+          selfPolygonIndex: 11
+          otherPolygonIndex: 10
+          distance:
+            Raw: 6491728
+          width:
+            Raw: 8729824
+          hasOther: 1
+        - pointA:
+            RawX: 9966715
+            RawY: 15649997
+          pointB:
+            RawX: 9966715
+            RawY: 12504269
+          selfPolygonIndex: 11
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 3145726
+          hasOther: 0
+        - pointA:
+            RawX: 9966715
+            RawY: 12504269
+          pointB:
+            RawX: 15996027
+            RawY: 9358541
+          selfPolygonIndex: 11
+          otherPolygonIndex: 28
+          distance:
+            Raw: 1238945
+          width:
+            Raw: 6800600
+          hasOther: 1
+        - pointA:
+            RawX: 15996027
+            RawY: 9358541
+          pointB:
+            RawX: 16520315
+            RawY: 9882829
+          selfPolygonIndex: 11
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        centroid:
+          RawX: 12531363
+          RawY: 12282164
+        normal:
+        - RawX: 692714
+          RawY: 787175
+        - RawX: -1048575
+          RawY: 0
+        - RawX: -485034
+          RawY: -929649
+        - RawX: 741455
+          RawY: -741455
+        vertsCount: 4
+        index: 11
+      - verts:
+        - RawX: 13898875
+          RawY: 2542797
+        - RawX: 16520315
+          RawY: 3591373
+        - RawX: 15996027
+          RawY: 4115661
+        - RawX: 13374587
+          RawY: 3067085
+        edges:
+        - pointA:
+            RawX: 16520315
+            RawY: 3591373
+          pointB:
+            RawX: 13898875
+            RawY: 2542797
+          selfPolygonIndex: 12
+          otherPolygonIndex: 1
+          distance:
+            Raw: 2561682
+          width:
+            Raw: 2823376
+          hasOther: 1
+        - pointA:
+            RawX: 16520315
+            RawY: 3591373
+          pointB:
+            RawX: 15996027
+            RawY: 4115661
+          selfPolygonIndex: 12
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 15996027
+            RawY: 4115661
+          pointB:
+            RawX: 13374587
+            RawY: 3067085
+          selfPolygonIndex: 12
+          otherPolygonIndex: 18
+          distance:
+            Raw: 6716280
+          width:
+            Raw: 2823376
+          hasOther: 1
+        - pointA:
+            RawX: 13374587
+            RawY: 3067085
+          pointB:
+            RawX: 13898875
+            RawY: 2542797
+          selfPolygonIndex: 12
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        centroid:
+          RawX: 14947411
+          RawY: 3329219
+        normal:
+        - RawX: 389431
+          RawY: -973578
+        - RawX: 741455
+          RawY: 741455
+        - RawX: -389431
+          RawY: 973577
+        - RawX: -741455
+          RawY: -741455
+        vertsCount: 4
+        index: 12
+      - verts:
+        - RawX: 25957499
+          RawY: -26030899
+        - RawX: 22549627
+          RawY: -19477299
+        - RawX: 22025339
+          RawY: -20001587
+        edges:
+        - pointA:
+            RawX: 22549627
+            RawY: -19477299
+          pointB:
+            RawX: 25957499
+            RawY: -26030899
+          selfPolygonIndex: 13
+          otherPolygonIndex: 2
+          distance:
+            Raw: 13907368
+          width:
+            Raw: 7386692
+          hasOther: 1
+        - pointA:
+            RawX: 22549627
+            RawY: -19477299
+          pointB:
+            RawX: 22025339
+            RawY: -20001587
+          selfPolygonIndex: 13
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 22025339
+            RawY: -20001587
+          pointB:
+            RawX: 25957499
+            RawY: -26030899
+          selfPolygonIndex: 13
+          otherPolygonIndex: 48
+          distance:
+            Raw: 5269796
+          width:
+            Raw: 7198224
+          hasOther: 1
+        centroid:
+          RawX: 23510737
+          RawY: -21836520
+        normal:
+        - RawX: 930312
+          RawY: 483762
+        - RawX: -741455
+          RawY: 741455
+        - RawX: -878296
+          RawY: -572802
+        vertsCount: 3
+        index: 13
+      - verts:
+        - RawX: 9442427
+          RawY: -17642291
+        - RawX: 9442427
+          RawY: -22885171
+        - RawX: 16258171
+          RawY: -19477299
+        - RawX: 16258171
+          RawY: -14234419
+        edges:
+        - pointA:
+            RawX: 9442427
+            RawY: -17642291
+          pointB:
+            RawX: 9442427
+            RawY: -22885171
+          selfPolygonIndex: 14
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 9442427
+            RawY: -22885171
+          pointB:
+            RawX: 16258171
+            RawY: -19477299
+          selfPolygonIndex: 14
+          otherPolygonIndex: 31
+          distance:
+            Raw: 2585692
+          width:
+            Raw: 7620232
+          hasOther: 1
+        - pointA:
+            RawX: 16258171
+            RawY: -19477299
+          pointB:
+            RawX: 16258171
+            RawY: -14234419
+          selfPolygonIndex: 14
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 9442427
+            RawY: -17642291
+          pointB:
+            RawX: 16258171
+            RawY: -14234419
+          selfPolygonIndex: 14
+          otherPolygonIndex: 8
+          distance:
+            Raw: 4709080
+          width:
+            Raw: 7620232
+          hasOther: 1
+        centroid:
+          RawX: 12849934
+          RawY: -18559269
+        normal:
+        - RawX: -1048575
+          RawY: 0
+        - RawX: 468936
+          RawY: -937872
+        - RawX: 1048575
+          RawY: 0
+        - RawX: -468936
+          RawY: 937872
+        vertsCount: 4
+        index: 14
+      - verts:
+        - RawX: 3675259
+          RawY: -17118003
+        - RawX: 8918139
+          RawY: -17118003
+        - RawX: 7345275
+          RawY: -11612979
+        - RawX: 5248123
+          RawY: -11612979
+        - RawX: -1305477
+          RawY: -13185843
+        edges:
+        - pointA:
+            RawX: 3675259
+            RawY: -17118003
+          pointB:
+            RawX: 8918139
+            RawY: -17118003
+          selfPolygonIndex: 15
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 7345275
+            RawY: -11612979
+          pointB:
+            RawX: 8918139
+            RawY: -17118003
+          selfPolygonIndex: 15
+          otherPolygonIndex: 8
+          distance:
+            Raw: 6550996
+          width:
+            Raw: 5725308
+          hasOther: 1
+        - pointA:
+            RawX: 7345275
+            RawY: -11612979
+          pointB:
+            RawX: 5248123
+            RawY: -11612979
+          selfPolygonIndex: 15
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 2097152
+          hasOther: 0
+        - pointA:
+            RawX: 5248123
+            RawY: -11612979
+          pointB:
+            RawX: -1305477
+            RawY: -13185843
+          selfPolygonIndex: 15
+          otherPolygonIndex: 35
+          distance:
+            Raw: 2973992
+          width:
+            Raw: 6739700
+          hasOther: 1
+        - pointA:
+            RawX: -1305477
+            RawY: -13185843
+          pointB:
+            RawX: 3675259
+            RawY: -17118003
+          selfPolygonIndex: 15
+          otherPolygonIndex: 36
+          distance:
+            Raw: 3805082
+          width:
+            Raw: 6345832
+          hasOther: 1
+        centroid:
+          RawX: 4590620
+          RawY: -14401406
+        normal:
+        - RawX: 0
+          RawY: -1048575
+        - RawX: 1008231
+          RawY: 288066
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -244709
+          RawY: 1019618
+        - RawX: -649744
+          RawY: -823009
+        vertsCount: 5
+        index: 15
+      - verts:
+        - RawX: 4723835
+          RawY: -11088691
+        - RawX: 4723835
+          RawY: -8729395
+        - RawX: -1305477
+          RawY: -13185843
+        edges:
+        - pointA:
+            RawX: 4723835
+            RawY: -11088691
+          pointB:
+            RawX: 4723835
+            RawY: -8729395
+          selfPolygonIndex: 16
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 2359294
+          hasOther: 0
+        - pointA:
+            RawX: -1305477
+            RawY: -13185843
+          pointB:
+            RawX: 4723835
+            RawY: -8729395
+          selfPolygonIndex: 16
+          otherPolygonIndex: 7
+          distance:
+            Raw: 2162862
+          width:
+            Raw: 7497500
+          hasOther: 1
+        - pointA:
+            RawX: -1305477
+            RawY: -13185843
+          pointB:
+            RawX: 4723835
+            RawY: -11088691
+          selfPolygonIndex: 16
+          otherPolygonIndex: 35
+          distance:
+            Raw: 976968
+          width:
+            Raw: 6383620
+          hasOther: 1
+        centroid:
+          RawX: 2714047
+          RawY: -11001243
+        normal:
+        - RawX: 1048576
+          RawY: 0
+        - RawX: -623263
+          RawY: 843237
+        - RawX: 344478
+          RawY: -990375
+        vertsCount: 3
+        index: 16
+      - verts:
+        - RawX: 3675259
+          RawY: 12504269
+        - RawX: 3675259
+          RawY: 15649997
+        - RawX: -5237637
+          RawY: 20368589
+        - RawX: -6810501
+          RawY: 14863565
+        - RawX: -6810501
+          RawY: 9620685
+        - RawX: -2091909
+          RawY: 9620685
+        edges:
+        - pointA:
+            RawX: 3675259
+            RawY: 12504269
+          pointB:
+            RawX: 3675259
+            RawY: 15649997
+          selfPolygonIndex: 17
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 3145726
+          hasOther: 0
+        - pointA:
+            RawX: 3675259
+            RawY: 15649997
+          pointB:
+            RawX: -5237637
+            RawY: 20368589
+          selfPolygonIndex: 17
+          otherPolygonIndex: 38
+          distance:
+            Raw: 4445368
+          width:
+            Raw: 10084880
+          hasOther: 1
+        - pointA:
+            RawX: -5237637
+            RawY: 20368589
+          pointB:
+            RawX: -6810501
+            RawY: 14863565
+          selfPolygonIndex: 17
+          otherPolygonIndex: 39
+          distance:
+            Raw: 5415748
+          width:
+            Raw: 5725308
+          hasOther: 1
+        - pointA:
+            RawX: -6810501
+            RawY: 14863565
+          pointB:
+            RawX: -6810501
+            RawY: 9620685
+          selfPolygonIndex: 17
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -6810501
+            RawY: 9620685
+          pointB:
+            RawX: -2091909
+            RawY: 9620685
+          selfPolygonIndex: 17
+          otherPolygonIndex: 33
+          distance:
+            Raw: 5058872
+          width:
+            Raw: 4718588
+          hasOther: 1
+        - pointA:
+            RawX: -2091909
+            RawY: 9620685
+          pointB:
+            RawX: 3675259
+            RawY: 12504269
+          selfPolygonIndex: 17
+          otherPolygonIndex: 32
+          distance:
+            Raw: 5313076
+          width:
+            Raw: 6447888
+          hasOther: 1
+        centroid:
+          RawX: -2262886
+          RawY: 14252765
+        normal:
+        - RawX: 1048575
+          RawY: 0
+        - RawX: 490612
+          RawY: 926712
+        - RawX: -1008231
+          RawY: 288066
+        - RawX: -1048575
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        - RawX: 468935
+          RawY: -937871
+        vertsCount: 6
+        index: 17
+      - verts:
+        - RawX: 13374587
+          RawY: 3067085
+        - RawX: 15996027
+          RawY: 4115661
+        - RawX: 15996027
+          RawY: 9358541
+        - RawX: 9442427
+          RawY: 11979981
+        - RawX: 4199547
+          RawY: 11979981
+        - RawX: 3675259
+          RawY: 9096397
+        - RawX: 3675259
+          RawY: 3853517
+        - RawX: 8131707
+          RawY: 3067085
+        edges:
+        - pointA:
+            RawX: 15996027
+            RawY: 4115661
+          pointB:
+            RawX: 13374587
+            RawY: 3067085
+          selfPolygonIndex: 18
+          otherPolygonIndex: 12
+          distance:
+            Raw: 6716280
+          width:
+            Raw: 2823376
+          hasOther: 1
+        - pointA:
+            RawX: 15996027
+            RawY: 4115661
+          pointB:
+            RawX: 15996027
+            RawY: 9358541
+          selfPolygonIndex: 18
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 15996027
+            RawY: 9358541
+          pointB:
+            RawX: 9442427
+            RawY: 11979981
+          selfPolygonIndex: 18
+          otherPolygonIndex: 28
+          distance:
+            Raw: 4566312
+          width:
+            Raw: 7058440
+          hasOther: 1
+        - pointA:
+            RawX: 9442427
+            RawY: 11979981
+          pointB:
+            RawX: 4199547
+            RawY: 11979981
+          selfPolygonIndex: 18
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 4199547
+            RawY: 11979981
+          pointB:
+            RawX: 3675259
+            RawY: 9096397
+          selfPolygonIndex: 18
+          otherPolygonIndex: 29
+          distance:
+            Raw: 6823480
+          width:
+            Raw: 2930858
+          hasOther: 1
+        - pointA:
+            RawX: 3675259
+            RawY: 9096397
+          pointB:
+            RawX: 3675259
+            RawY: 3853517
+          selfPolygonIndex: 18
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 3675259
+            RawY: 3853517
+          pointB:
+            RawX: 8131707
+            RawY: 3067085
+          selfPolygonIndex: 18
+          otherPolygonIndex: 27
+          distance:
+            Raw: 5169056
+          width:
+            Raw: 4525304
+          hasOther: 1
+        - pointA:
+            RawX: 8131707
+            RawY: 3067085
+          pointB:
+            RawX: 13374587
+            RawY: 3067085
+          selfPolygonIndex: 18
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        centroid:
+          RawX: 9540670
+          RawY: 7313640
+        normal:
+        - RawX: 389431
+          RawY: -973578
+        - RawX: 1048575
+          RawY: 0
+        - RawX: 389430
+          RawY: 973575
+        - RawX: 0
+          RawY: 1048575
+        - RawX: -1031663
+          RawY: 187575
+        - RawX: -1048575
+          RawY: 0
+        - RawX: -182227
+          RawY: -1032619
+        - RawX: 0
+          RawY: -1048575
+        vertsCount: 8
+        index: 18
+      - verts:
+        - RawX: -16509829
+          RawY: -17904435
+        - RawX: -16509829
+          RawY: -23147315
+        - RawX: 3150971
+          RawY: -22885171
+        - RawX: 3150971
+          RawY: -17642291
+        - RawX: -5499781
+          RawY: -16069427
+        - RawX: -14412677
+          RawY: -16069427
+        edges:
+        - pointA:
+            RawX: -16509829
+            RawY: -17904435
+          pointB:
+            RawX: -16509829
+            RawY: -23147315
+          selfPolygonIndex: 19
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -16509829
+            RawY: -23147315
+          pointB:
+            RawX: 3150971
+            RawY: -22885171
+          selfPolygonIndex: 19
+          otherPolygonIndex: 55
+          distance:
+            Raw: 4705804
+          width:
+            Raw: 19662544
+          hasOther: 1
+        - pointA:
+            RawX: 3150971
+            RawY: -22885171
+          pointB:
+            RawX: 3150971
+            RawY: -17642291
+          selfPolygonIndex: 19
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 3150971
+            RawY: -17642291
+          pointB:
+            RawX: -5499781
+            RawY: -16069427
+          selfPolygonIndex: 19
+          otherPolygonIndex: 46
+          distance:
+            Raw: 5622848
+          width:
+            Raw: 8792576
+          hasOther: 1
+        - pointA:
+            RawX: -5499781
+            RawY: -16069427
+          pointB:
+            RawX: -14412677
+            RawY: -16069427
+          selfPolygonIndex: 19
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 8912888
+          hasOther: 0
+        - pointA:
+            RawX: -14412677
+            RawY: -16069427
+          pointB:
+            RawX: -16509829
+            RawY: -17904435
+          selfPolygonIndex: 19
+          otherPolygonIndex: 47
+          distance:
+            Raw: 9251880
+          width:
+            Raw: 2786628
+          hasOther: 1
+        centroid:
+          RawX: -6977243
+          RawY: -19741971
+        normal:
+        - RawX: -1048575
+          RawY: 0
+        - RawX: 13979
+          RawY: -1048482
+        - RawX: 1048575
+          RawY: 0
+        - RawX: 187573
+          RawY: 1031654
+        - RawX: 0
+          RawY: 1048568
+        - RawX: -690493
+          RawY: 789134
+        vertsCount: 6
+        index: 19
+      - verts:
+        - RawX: -1829765
+          RawY: -13710131
+        - RawX: -4975493
+          RawY: -13710131
+        - RawX: -4975493
+          RawY: -15545139
+        - RawX: 3150971
+          RawY: -17642291
+        edges:
+        - pointA:
+            RawX: -1829765
+            RawY: -13710131
+          pointB:
+            RawX: -4975493
+            RawY: -13710131
+          selfPolygonIndex: 20
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 3145726
+          hasOther: 0
+        - pointA:
+            RawX: -4975493
+            RawY: -13710131
+          pointB:
+            RawX: -4975493
+            RawY: -15545139
+          selfPolygonIndex: 20
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 1835007
+          hasOther: 0
+        - pointA:
+            RawX: -4975493
+            RawY: -15545139
+          pointB:
+            RawX: 3150971
+            RawY: -17642291
+          selfPolygonIndex: 20
+          otherPolygonIndex: 46
+          distance:
+            Raw: 1246859
+          width:
+            Raw: 8392696
+          hasOther: 1
+        - pointA:
+            RawX: 3150971
+            RawY: -17642291
+          pointB:
+            RawX: -1829765
+            RawY: -13710131
+          selfPolygonIndex: 20
+          otherPolygonIndex: 36
+          distance:
+            Raw: 2714606
+          width:
+            Raw: 6345832
+          hasOther: 1
+        centroid:
+          RawX: -1791224
+          RawY: -15354988
+        normal:
+        - RawX: 0
+          RawY: 1048575
+        - RawX: -1048576
+          RawY: 0
+        - RawX: -262016
+          RawY: -1015312
+        - RawX: 649743
+          RawY: 823008
+        vertsCount: 4
+        index: 20
+      - verts:
+        - RawX: -17034117
+          RawY: -17380147
+        - RawX: -14936965
+          RawY: -15545139
+        - RawX: -14936965
+          RawY: -5583667
+        - RawX: -15985541
+          RawY: -5583667
+        - RawX: -22276997
+          RawY: -17380147
+        edges:
+        - pointA:
+            RawX: -17034117
+            RawY: -17380147
+          pointB:
+            RawX: -14936965
+            RawY: -15545139
+          selfPolygonIndex: 21
+          otherPolygonIndex: 47
+          distance:
+            Raw: 4306100
+          width:
+            Raw: 2786628
+          hasOther: 1
+        - pointA:
+            RawX: -14936965
+            RawY: -15545139
+          pointB:
+            RawX: -14936965
+            RawY: -5583667
+          selfPolygonIndex: 21
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 9961464
+          hasOther: 0
+        - pointA:
+            RawX: -14936965
+            RawY: -5583667
+          pointB:
+            RawX: -15985541
+            RawY: -5583667
+          selfPolygonIndex: 21
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 1048576
+          hasOther: 0
+        - pointA:
+            RawX: -15985541
+            RawY: -5583667
+          pointB:
+            RawX: -22276997
+            RawY: -17380147
+          selfPolygonIndex: 21
+          otherPolygonIndex: 49
+          distance:
+            Raw: 3542920
+          width:
+            Raw: 13369336
+          hasOther: 1
+        - pointA:
+            RawX: -22276997
+            RawY: -17380147
+          pointB:
+            RawX: -17034117
+            RawY: -17380147
+          selfPolygonIndex: 21
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        centroid:
+          RawX: -17499410
+          RawY: -12801929
+        normal:
+        - RawX: 690492
+          RawY: -789134
+        - RawX: 1048572
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -925212
+          RawY: 493446
+        - RawX: 0
+          RawY: -1048575
+        vertsCount: 5
+        index: 21
+      - verts:
+        - RawX: -10218373
+          RawY: 183501
+        - RawX: -10218373
+          RawY: -2962227
+        - RawX: -5499781
+          RawY: -2962227
+        - RawX: -2091909
+          RawY: 3329229
+        edges:
+        - pointA:
+            RawX: -10218373
+            RawY: 183501
+          pointB:
+            RawX: -10218373
+            RawY: -2962227
+          selfPolygonIndex: 22
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 3145726
+          hasOther: 0
+        - pointA:
+            RawX: -10218373
+            RawY: -2962227
+          pointB:
+            RawX: -5499781
+            RawY: -2962227
+          selfPolygonIndex: 22
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -5499781
+            RawY: -2962227
+          pointB:
+            RawX: -2091909
+            RawY: 3329229
+          selfPolygonIndex: 22
+          otherPolygonIndex: 62
+          distance:
+            Raw: 2561776
+          width:
+            Raw: 7155136
+          hasOther: 1
+        - pointA:
+            RawX: -2091909
+            RawY: 3329229
+          pointB:
+            RawX: -10218373
+            RawY: 183501
+          selfPolygonIndex: 22
+          otherPolygonIndex: 61
+          distance:
+            Raw: 2057345
+          width:
+            Raw: 8714064
+          hasOther: 1
+        centroid:
+          RawX: -6664365
+          RawY: -379910
+        normal:
+        - RawX: -1048575
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        - RawX: 922002
+          RawY: -499418
+        - RawX: -378528
+          RawY: 977864
+        vertsCount: 4
+        index: 22
+      - verts:
+        - RawX: -4975493
+          RawY: -3486515
+        - RawX: -4975493
+          RawY: -7418675
+        - RawX: -1829765
+          RawY: -7418675
+        edges:
+        - pointA:
+            RawX: -4975493
+            RawY: -3486515
+          pointB:
+            RawX: -4975493
+            RawY: -7418675
+          selfPolygonIndex: 23
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 3932158
+          hasOther: 0
+        - pointA:
+            RawX: -4975493
+            RawY: -7418675
+          pointB:
+            RawX: -1829765
+            RawY: -7418675
+          selfPolygonIndex: 23
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 3145726
+          hasOther: 0
+        - pointA:
+            RawX: -4975493
+            RawY: -3486515
+          pointB:
+            RawX: -1829765
+            RawY: -7418675
+          selfPolygonIndex: 23
+          otherPolygonIndex: 0
+          distance:
+            Raw: 6014672
+          width:
+            Raw: 5035620
+          hasOther: 1
+        centroid:
+          RawX: -3926901
+          RawY: -6107929
+        normal:
+        - RawX: -1048575
+          RawY: 0
+        - RawX: 0
+          RawY: -1048575
+        - RawX: 818797
+          RawY: 655038
+        vertsCount: 3
+        index: 23
+      - verts:
+        - RawX: -7334789
+          RawY: 15387853
+        - RawX: -5761925
+          RawY: 20892877
+        - RawX: -5761925
+          RawY: 25873613
+        - RawX: -20441989
+          RawY: 25873613
+        - RawX: -20441989
+          RawY: 22203597
+        - RawX: -12577669
+          RawY: 15387853
+        edges:
+        - pointA:
+            RawX: -7334789
+            RawY: 15387853
+          pointB:
+            RawX: -5761925
+            RawY: 20892877
+          selfPolygonIndex: 24
+          otherPolygonIndex: 39
+          distance:
+            Raw: 6978420
+          width:
+            Raw: 5725308
+          hasOther: 1
+        - pointA:
+            RawX: -5761925
+            RawY: 20892877
+          pointB:
+            RawX: -5761925
+            RawY: 25873613
+          selfPolygonIndex: 24
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4980732
+          hasOther: 0
+        - pointA:
+            RawX: -5761925
+            RawY: 25873613
+          pointB:
+            RawX: -20441989
+            RawY: 25873613
+          selfPolygonIndex: 24
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 14680056
+          hasOther: 0
+        - pointA:
+            RawX: -20441989
+            RawY: 25873613
+          pointB:
+            RawX: -20441989
+            RawY: 22203597
+          selfPolygonIndex: 24
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 3670014
+          hasOther: 0
+        - pointA:
+            RawX: -20441989
+            RawY: 22203597
+          pointB:
+            RawX: -12577669
+            RawY: 15387853
+          selfPolygonIndex: 24
+          otherPolygonIndex: 40
+          distance:
+            Raw: 4968808
+          width:
+            Raw: 10406816
+          hasOther: 1
+        - pointA:
+            RawX: -12577669
+            RawY: 15387853
+          pointB:
+            RawX: -7334789
+            RawY: 15387853
+          selfPolygonIndex: 24
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        centroid:
+          RawX: -12311801
+          RawY: 21398148
+        normal:
+        - RawX: 1008231
+          RawY: -288066
+        - RawX: 1048576
+          RawY: 0
+        - RawX: 0
+          RawY: 1048572
+        - RawX: -1048576
+          RawY: 0
+        - RawX: -686745
+          RawY: -792398
+        - RawX: 0
+          RawY: -1048575
+        vertsCount: 6
+        index: 24
+      - verts:
+        - RawX: 7345275
+          RawY: -8205107
+        - RawX: 7869563
+          RawY: -8729395
+        - RawX: 21763195
+          RawY: 3591373
+        - RawX: 13374587
+          RawY: -3224371
+        edges:
+        - pointA:
+            RawX: 7345275
+            RawY: -8205107
+          pointB:
+            RawX: 7869563
+            RawY: -8729395
+          selfPolygonIndex: 25
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 21763195
+            RawY: 3591373
+          pointB:
+            RawX: 7869563
+            RawY: -8729395
+          selfPolygonIndex: 25
+          otherPolygonIndex: 4
+          distance:
+            Raw: 5039488
+          width:
+            Raw: 18569712
+          hasOther: 1
+        - pointA:
+            RawX: 21763195
+            RawY: 3591373
+          pointB:
+            RawX: 13374587
+            RawY: -3224371
+          selfPolygonIndex: 25
+          otherPolygonIndex: 64
+          distance:
+            Raw: 5319352
+          width:
+            Raw: 10808472
+          hasOther: 1
+        - pointA:
+            RawX: 13374587
+            RawY: -3224371
+          pointB:
+            RawX: 7345275
+            RawY: -8205107
+          selfPolygonIndex: 25
+          otherPolygonIndex: 63
+          distance:
+            Raw: 2844932
+          width:
+            Raw: 7820504
+          hasOther: 1
+        centroid:
+          RawX: 12413369
+          RawY: -4360321
+        normal:
+        - RawX: -741455
+          RawY: -741455
+        - RawX: 695705
+          RawY: -784520
+        - RawX: -661219
+          RawY: 813808
+        - RawX: -667817
+          RawY: 808409
+        vertsCount: 4
+        index: 25
+      - verts:
+        - RawX: -20966277
+          RawY: 21679309
+        - RawX: -17034117
+          RawY: 9882829
+        - RawX: -16509829
+          RawY: 9358541
+        - RawX: -13101957
+          RawY: 9620685
+        - RawX: -13101957
+          RawY: 14863565
+        - RawX: -20441989
+          RawY: 22203597
+        edges:
+        - pointA:
+            RawX: -20966277
+            RawY: 21679309
+          pointB:
+            RawX: -17034117
+            RawY: 9882829
+          selfPolygonIndex: 26
+          otherPolygonIndex: 41
+          distance:
+            Raw: 5087436
+          width:
+            Raw: 12434576
+          hasOther: 1
+        - pointA:
+            RawX: -17034117
+            RawY: 9882829
+          pointB:
+            RawX: -16509829
+            RawY: 9358541
+          selfPolygonIndex: 26
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -13101957
+            RawY: 9620685
+          pointB:
+            RawX: -16509829
+            RawY: 9358541
+          selfPolygonIndex: 26
+          otherPolygonIndex: 5
+          distance:
+            Raw: 7286824
+          width:
+            Raw: 3417938
+          hasOther: 1
+        - pointA:
+            RawX: -13101957
+            RawY: 9620685
+          pointB:
+            RawX: -13101957
+            RawY: 14863565
+          selfPolygonIndex: 26
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -13101957
+            RawY: 14863565
+          pointB:
+            RawX: -20441989
+            RawY: 22203597
+          selfPolygonIndex: 26
+          otherPolygonIndex: 40
+          distance:
+            Raw: 2901580
+          width:
+            Raw: 10380368
+          hasOther: 1
+        - pointA:
+            RawX: -20441989
+            RawY: 22203597
+          pointB:
+            RawX: -20966277
+            RawY: 21679309
+          selfPolygonIndex: 26
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        centroid:
+          RawX: -16533216
+          RawY: 14825069
+        normal:
+        - RawX: -994759
+          RawY: -331587
+        - RawX: -741455
+          RawY: -741455
+        - RawX: 80422
+          RawY: -1045486
+        - RawX: 1048575
+          RawY: 0
+        - RawX: 741454
+          RawY: 741454
+        - RawX: -741455
+          RawY: 741455
+        vertsCount: 6
+        index: 26
+      - verts:
+        - RawX: 7607419
+          RawY: 2542797
+        - RawX: 8131707
+          RawY: 3067085
+        - RawX: 3675259
+          RawY: 3853517
+        edges:
+        - pointA:
+            RawX: 7607419
+            RawY: 2542797
+          pointB:
+            RawX: 8131707
+            RawY: 3067085
+          selfPolygonIndex: 27
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 3675259
+            RawY: 3853517
+          pointB:
+            RawX: 8131707
+            RawY: 3067085
+          selfPolygonIndex: 27
+          otherPolygonIndex: 18
+          distance:
+            Raw: 5169056
+          width:
+            Raw: 4525304
+          hasOther: 1
+        - pointA:
+            RawX: 3675259
+            RawY: 3853517
+          pointB:
+            RawX: 7607419
+            RawY: 2542797
+          selfPolygonIndex: 27
+          otherPolygonIndex: 30
+          distance:
+            Raw: 1929771
+          width:
+            Raw: 4144860
+          hasOther: 1
+        centroid:
+          RawX: 6471423
+          RawY: 3154447
+        normal:
+        - RawX: 741455
+          RawY: -741455
+        - RawX: 182226
+          RawY: 1032618
+        - RawX: -331589
+          RawY: -994767
+        vertsCount: 3
+        index: 27
+      - verts:
+        - RawX: 15996027
+          RawY: 9358541
+        - RawX: 9966715
+          RawY: 12504269
+        - RawX: 9442427
+          RawY: 11979981
+        edges:
+        - pointA:
+            RawX: 9966715
+            RawY: 12504269
+          pointB:
+            RawX: 15996027
+            RawY: 9358541
+          selfPolygonIndex: 28
+          otherPolygonIndex: 11
+          distance:
+            Raw: 1238945
+          width:
+            Raw: 6800600
+          hasOther: 1
+        - pointA:
+            RawX: 9966715
+            RawY: 12504269
+          pointB:
+            RawX: 9442427
+            RawY: 11979981
+          selfPolygonIndex: 28
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 15996027
+            RawY: 9358541
+          pointB:
+            RawX: 9442427
+            RawY: 11979981
+          selfPolygonIndex: 28
+          otherPolygonIndex: 18
+          distance:
+            Raw: 4566312
+          width:
+            Raw: 7058440
+          hasOther: 1
+        centroid:
+          RawX: 11801681
+          RawY: 11280889
+        normal:
+        - RawX: 485034
+          RawY: 929648
+        - RawX: -741455
+          RawY: 741455
+        - RawX: -389430
+          RawY: -973575
+        vertsCount: 3
+        index: 28
+      - verts:
+        - RawX: 3150971
+          RawY: 9620685
+        - RawX: 3675259
+          RawY: 9096397
+        - RawX: 4199547
+          RawY: 11979981
+        - RawX: 3675259
+          RawY: 12504269
+        edges:
+        - pointA:
+            RawX: 3150971
+            RawY: 9620685
+          pointB:
+            RawX: 3675259
+            RawY: 9096397
+          selfPolygonIndex: 29
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 4199547
+            RawY: 11979981
+          pointB:
+            RawX: 3675259
+            RawY: 9096397
+          selfPolygonIndex: 29
+          otherPolygonIndex: 18
+          distance:
+            Raw: 6823480
+          width:
+            Raw: 2930858
+          hasOther: 1
+        - pointA:
+            RawX: 4199547
+            RawY: 11979981
+          pointB:
+            RawX: 3675259
+            RawY: 12504269
+          selfPolygonIndex: 29
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 3675259
+            RawY: 12504269
+          pointB:
+            RawX: 3150971
+            RawY: 9620685
+          selfPolygonIndex: 29
+          otherPolygonIndex: 32
+          distance:
+            Raw: 2108476
+          width:
+            Raw: 2930858
+          hasOther: 1
+        centroid:
+          RawX: 3675236
+          RawY: 10800272
+        normal:
+        - RawX: -741455
+          RawY: -741455
+        - RawX: 1031662
+          RawY: -187575
+        - RawX: 741455
+          RawY: 741455
+        - RawX: -1031663
+          RawY: 187575
+        vertsCount: 4
+        index: 29
+      - verts:
+        - RawX: 7607419
+          RawY: -2700083
+        - RawX: 7607419
+          RawY: 2542797
+        - RawX: 3675259
+          RawY: 3853517
+        - RawX: 3150971
+          RawY: 3329229
+        edges:
+        - pointA:
+            RawX: 7607419
+            RawY: -2700083
+          pointB:
+            RawX: 7607419
+            RawY: 2542797
+          selfPolygonIndex: 30
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 3675259
+            RawY: 3853517
+          pointB:
+            RawX: 7607419
+            RawY: 2542797
+          selfPolygonIndex: 30
+          otherPolygonIndex: 27
+          distance:
+            Raw: 1929771
+          width:
+            Raw: 4144860
+          hasOther: 1
+        - pointA:
+            RawX: 3675259
+            RawY: 3853517
+          pointB:
+            RawX: 3150971
+            RawY: 3329229
+          selfPolygonIndex: 30
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 3150971
+            RawY: 3329229
+          pointB:
+            RawX: 7607419
+            RawY: -2700083
+          selfPolygonIndex: 30
+          otherPolygonIndex: 52
+          distance:
+            Raw: 2920552
+          width:
+            Raw: 7497500
+          hasOther: 1
+        centroid:
+          RawX: 5983947
+          RawY: 1287260
+        normal:
+        - RawX: 1048575
+          RawY: 0
+        - RawX: 331588
+          RawY: 994766
+        - RawX: -741455
+          RawY: 741455
+        - RawX: -843238
+          RawY: -623263
+        vertsCount: 4
+        index: 30
+      - verts:
+        - RawX: 16782459
+          RawY: -20001587
+        - RawX: 16258171
+          RawY: -19477299
+        - RawX: 9442427
+          RawY: -22885171
+        edges:
+        - pointA:
+            RawX: 16782459
+            RawY: -20001587
+          pointB:
+            RawX: 16258171
+            RawY: -19477299
+          selfPolygonIndex: 31
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 9442427
+            RawY: -22885171
+          pointB:
+            RawX: 16258171
+            RawY: -19477299
+          selfPolygonIndex: 31
+          otherPolygonIndex: 14
+          distance:
+            Raw: 2585692
+          width:
+            Raw: 7620232
+          hasOther: 1
+        - pointA:
+            RawX: 9442427
+            RawY: -22885171
+          pointB:
+            RawX: 16782459
+            RawY: -20001587
+          selfPolygonIndex: 31
+          otherPolygonIndex: 48
+          distance:
+            Raw: 4632668
+          width:
+            Raw: 7886132
+          hasOther: 1
+        centroid:
+          RawX: 14160968
+          RawY: -20787946
+        normal:
+        - RawX: 741455
+          RawY: 741455
+        - RawX: -468936
+          RawY: 937872
+        - RawX: 383413
+          RawY: -975961
+        vertsCount: 3
+        index: 31
+      - verts:
+        - RawX: -2091909
+          RawY: 9620685
+        - RawX: 3150971
+          RawY: 9620685
+        - RawX: 3675259
+          RawY: 12504269
+        edges:
+        - pointA:
+            RawX: -2091909
+            RawY: 9620685
+          pointB:
+            RawX: 3150971
+            RawY: 9620685
+          selfPolygonIndex: 32
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 3675259
+            RawY: 12504269
+          pointB:
+            RawX: 3150971
+            RawY: 9620685
+          selfPolygonIndex: 32
+          otherPolygonIndex: 29
+          distance:
+            Raw: 2108476
+          width:
+            Raw: 2930858
+          hasOther: 1
+        - pointA:
+            RawX: -2091909
+            RawY: 9620685
+          pointB:
+            RawX: 3675259
+            RawY: 12504269
+          selfPolygonIndex: 32
+          otherPolygonIndex: 17
+          distance:
+            Raw: 5313076
+          width:
+            Raw: 6447888
+          hasOther: 1
+        centroid:
+          RawX: 1578102
+          RawY: 10581848
+        normal:
+        - RawX: 0
+          RawY: -1048575
+        - RawX: 1031662
+          RawY: -187575
+        - RawX: -468936
+          RawY: 937871
+        vertsCount: 3
+        index: 32
+      - verts:
+        - RawX: -2616197
+          RawY: 9096397
+        - RawX: -2091909
+          RawY: 9620685
+        - RawX: -6810501
+          RawY: 9620685
+        edges:
+        - pointA:
+            RawX: -2616197
+            RawY: 9096397
+          pointB:
+            RawX: -2091909
+            RawY: 9620685
+          selfPolygonIndex: 33
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -6810501
+            RawY: 9620685
+          pointB:
+            RawX: -2091909
+            RawY: 9620685
+          selfPolygonIndex: 33
+          otherPolygonIndex: 17
+          distance:
+            Raw: 5058872
+          width:
+            Raw: 4718588
+          hasOther: 1
+        - pointA:
+            RawX: -6810501
+            RawY: 9620685
+          pointB:
+            RawX: -2616197
+            RawY: 9096397
+          selfPolygonIndex: 33
+          otherPolygonIndex: 34
+          distance:
+            Raw: 1980564
+          width:
+            Raw: 4226944
+          hasOther: 1
+        centroid:
+          RawX: -3839506
+          RawY: 9445843
+        normal:
+        - RawX: 741455
+          RawY: -741455
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -130060
+          RawY: -1040476
+        vertsCount: 3
+        index: 33
+      - verts:
+        - RawX: -2616197
+          RawY: 3853517
+        - RawX: -2616197
+          RawY: 9096397
+        - RawX: -6810501
+          RawY: 9620685
+        - RawX: -7334789
+          RawY: 9096397
+        edges:
+        - pointA:
+            RawX: -2616197
+            RawY: 3853517
+          pointB:
+            RawX: -2616197
+            RawY: 9096397
+          selfPolygonIndex: 34
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -6810501
+            RawY: 9620685
+          pointB:
+            RawX: -2616197
+            RawY: 9096397
+          selfPolygonIndex: 34
+          otherPolygonIndex: 33
+          distance:
+            Raw: 1980564
+          width:
+            Raw: 4226944
+          hasOther: 1
+        - pointA:
+            RawX: -6810501
+            RawY: 9620685
+          pointB:
+            RawX: -7334789
+            RawY: 9096397
+          selfPolygonIndex: 34
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -7334789
+            RawY: 9096397
+          pointB:
+            RawX: -2616197
+            RawY: 3853517
+          selfPolygonIndex: 34
+          otherPolygonIndex: 53
+          distance:
+            Raw: 5562076
+          width:
+            Raw: 7053572
+          hasOther: 1
+        centroid:
+          RawX: -4316135
+          RawY: 7523485
+        normal:
+        - RawX: 1048575
+          RawY: 0
+        - RawX: 130059
+          RawY: 1040476
+        - RawX: -741455
+          RawY: 741455
+        - RawX: -779400
+          RawY: -701460
+        vertsCount: 4
+        index: 34
+      - verts:
+        - RawX: 5248123
+          RawY: -11612979
+        - RawX: 4723835
+          RawY: -11088691
+        - RawX: -1305477
+          RawY: -13185843
+        edges:
+        - pointA:
+            RawX: 5248123
+            RawY: -11612979
+          pointB:
+            RawX: 4723835
+            RawY: -11088691
+          selfPolygonIndex: 35
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -1305477
+            RawY: -13185843
+          pointB:
+            RawX: 4723835
+            RawY: -11088691
+          selfPolygonIndex: 35
+          otherPolygonIndex: 16
+          distance:
+            Raw: 976968
+          width:
+            Raw: 6383620
+          hasOther: 1
+        - pointA:
+            RawX: 5248123
+            RawY: -11612979
+          pointB:
+            RawX: -1305477
+            RawY: -13185843
+          selfPolygonIndex: 35
+          otherPolygonIndex: 15
+          distance:
+            Raw: 2973992
+          width:
+            Raw: 6739700
+          hasOther: 1
+        centroid:
+          RawX: 2888814
+          RawY: -11962453
+        normal:
+        - RawX: 741455
+          RawY: 741455
+        - RawX: -344478
+          RawY: 990374
+        - RawX: 244708
+          RawY: -1019619
+        vertsCount: 3
+        index: 35
+      - verts:
+        - RawX: 3150971
+          RawY: -17642291
+        - RawX: 3675259
+          RawY: -17118003
+        - RawX: -1305477
+          RawY: -13185843
+        - RawX: -1829765
+          RawY: -13710131
+        edges:
+        - pointA:
+            RawX: 3150971
+            RawY: -17642291
+          pointB:
+            RawX: 3675259
+            RawY: -17118003
+          selfPolygonIndex: 36
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -1305477
+            RawY: -13185843
+          pointB:
+            RawX: 3675259
+            RawY: -17118003
+          selfPolygonIndex: 36
+          otherPolygonIndex: 15
+          distance:
+            Raw: 3805082
+          width:
+            Raw: 6345832
+          hasOther: 1
+        - pointA:
+            RawX: -1305477
+            RawY: -13185843
+          pointB:
+            RawX: -1829765
+            RawY: -13710131
+          selfPolygonIndex: 36
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 3150971
+            RawY: -17642291
+          pointB:
+            RawX: -1829765
+            RawY: -13710131
+          selfPolygonIndex: 36
+          otherPolygonIndex: 20
+          distance:
+            Raw: 2714606
+          width:
+            Raw: 6345832
+          hasOther: 1
+        centroid:
+          RawX: 922741
+          RawY: -15413992
+        normal:
+        - RawX: 741455
+          RawY: -741455
+        - RawX: 649743
+          RawY: 823008
+        - RawX: -741455
+          RawY: 741455
+        - RawX: -649744
+          RawY: -823009
+        vertsCount: 4
+        index: 36
+      - verts:
+        - RawX: 9442427
+          RawY: 16174285
+        - RawX: 25957499
+          RawY: 20368589
+        - RawX: -5237637
+          RawY: 20368589
+        - RawX: 4199547
+          RawY: 16174285
+        edges:
+        - pointA:
+            RawX: 25957499
+            RawY: 20368589
+          pointB:
+            RawX: 9442427
+            RawY: 16174285
+          selfPolygonIndex: 37
+          otherPolygonIndex: 10
+          distance:
+            Raw: 10252568
+          width:
+            Raw: 17039344
+          hasOther: 1
+        - pointA:
+            RawX: 25957499
+            RawY: 20368589
+          pointB:
+            RawX: -5237637
+            RawY: 20368589
+          selfPolygonIndex: 37
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 31195120
+          hasOther: 0
+        - pointA:
+            RawX: -5237637
+            RawY: 20368589
+          pointB:
+            RawX: 4199547
+            RawY: 16174285
+          selfPolygonIndex: 37
+          otherPolygonIndex: 38
+          distance:
+            Raw: 8246044
+          width:
+            Raw: 10327272
+          hasOther: 1
+        - pointA:
+            RawX: 4199547
+            RawY: 16174285
+          pointB:
+            RawX: 9442427
+            RawY: 16174285
+          selfPolygonIndex: 37
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        centroid:
+          RawX: 9010286
+          RawY: 18768774
+        normal:
+        - RawX: 258108
+          RawY: -1016301
+        - RawX: 0
+          RawY: 1048568
+        - RawX: -425864
+          RawY: -958194
+        - RawX: 0
+          RawY: -1048575
+        vertsCount: 4
+        index: 37
+      - verts:
+        - RawX: 3675259
+          RawY: 15649997
+        - RawX: 4199547
+          RawY: 16174285
+        - RawX: -5237637
+          RawY: 20368589
+        edges:
+        - pointA:
+            RawX: 3675259
+            RawY: 15649997
+          pointB:
+            RawX: 4199547
+            RawY: 16174285
+          selfPolygonIndex: 38
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -5237637
+            RawY: 20368589
+          pointB:
+            RawX: 4199547
+            RawY: 16174285
+          selfPolygonIndex: 38
+          otherPolygonIndex: 37
+          distance:
+            Raw: 8246044
+          width:
+            Raw: 10327272
+          hasOther: 1
+        - pointA:
+            RawX: 3675259
+            RawY: 15649997
+          pointB:
+            RawX: -5237637
+            RawY: 20368589
+          selfPolygonIndex: 38
+          otherPolygonIndex: 17
+          distance:
+            Raw: 4445368
+          width:
+            Raw: 10084880
+          hasOther: 1
+        centroid:
+          RawX: 879051
+          RawY: 17397530
+        normal:
+        - RawX: 741455
+          RawY: -741455
+        - RawX: 425864
+          RawY: 958194
+        - RawX: -490613
+          RawY: -926713
+        vertsCount: 3
+        index: 38
+      - verts:
+        - RawX: -7334789
+          RawY: 15387853
+        - RawX: -6810501
+          RawY: 14863565
+        - RawX: -5237637
+          RawY: 20368589
+        - RawX: -5761925
+          RawY: 20892877
+        edges:
+        - pointA:
+            RawX: -7334789
+            RawY: 15387853
+          pointB:
+            RawX: -6810501
+            RawY: 14863565
+          selfPolygonIndex: 39
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -5237637
+            RawY: 20368589
+          pointB:
+            RawX: -6810501
+            RawY: 14863565
+          selfPolygonIndex: 39
+          otherPolygonIndex: 17
+          distance:
+            Raw: 5415748
+          width:
+            Raw: 5725308
+          hasOther: 1
+        - pointA:
+            RawX: -5237637
+            RawY: 20368589
+          pointB:
+            RawX: -5761925
+            RawY: 20892877
+          selfPolygonIndex: 39
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -7334789
+            RawY: 15387853
+          pointB:
+            RawX: -5761925
+            RawY: 20892877
+          selfPolygonIndex: 39
+          otherPolygonIndex: 24
+          distance:
+            Raw: 6978420
+          width:
+            Raw: 5725308
+          hasOther: 1
+        centroid:
+          RawX: -6286189
+          RawY: 17878149
+        normal:
+        - RawX: -741455
+          RawY: -741455
+        - RawX: 1008231
+          RawY: -288066
+        - RawX: 741455
+          RawY: 741455
+        - RawX: -1008231
+          RawY: 288066
+        vertsCount: 4
+        index: 39
+      - verts:
+        - RawX: -13101957
+          RawY: 14863565
+        - RawX: -12577669
+          RawY: 15387853
+        - RawX: -20441989
+          RawY: 22203597
+        edges:
+        - pointA:
+            RawX: -13101957
+            RawY: 14863565
+          pointB:
+            RawX: -12577669
+            RawY: 15387853
+          selfPolygonIndex: 40
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -20441989
+            RawY: 22203597
+          pointB:
+            RawX: -12577669
+            RawY: 15387853
+          selfPolygonIndex: 40
+          otherPolygonIndex: 24
+          distance:
+            Raw: 4968808
+          width:
+            Raw: 10406816
+          hasOther: 1
+        - pointA:
+            RawX: -13101957
+            RawY: 14863565
+          pointB:
+            RawX: -20441989
+            RawY: 22203597
+          selfPolygonIndex: 40
+          otherPolygonIndex: 26
+          distance:
+            Raw: 2901580
+          width:
+            Raw: 10380368
+          hasOther: 1
+        centroid:
+          RawX: -15373832
+          RawY: 17484958
+        normal:
+        - RawX: 741455
+          RawY: -741455
+        - RawX: 686744
+          RawY: 792397
+        - RawX: -741454
+          RawY: -741454
+        vertsCount: 3
+        index: 40
+      - verts:
+        - RawX: -22276997
+          RawY: 9882829
+        - RawX: -17034117
+          RawY: 9882829
+        - RawX: -20966277
+          RawY: 21679309
+        - RawX: -25947013
+          RawY: 21679309
+        edges:
+        - pointA:
+            RawX: -22276997
+            RawY: 9882829
+          pointB:
+            RawX: -17034117
+            RawY: 9882829
+          selfPolygonIndex: 41
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -20966277
+            RawY: 21679309
+          pointB:
+            RawX: -17034117
+            RawY: 9882829
+          selfPolygonIndex: 41
+          otherPolygonIndex: 26
+          distance:
+            Raw: 5087436
+          width:
+            Raw: 12434576
+          hasOther: 1
+        - pointA:
+            RawX: -20966277
+            RawY: 21679309
+          pointB:
+            RawX: -25947013
+            RawY: 21679309
+          selfPolygonIndex: 41
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4980732
+          hasOther: 0
+        - pointA:
+            RawX: -25947013
+            RawY: 21679309
+          pointB:
+            RawX: -22276997
+            RawY: 9882829
+          selfPolygonIndex: 41
+          otherPolygonIndex: 42
+          distance:
+            Raw: 2988218
+          width:
+            Raw: 12354184
+          hasOther: 1
+        centroid:
+          RawX: -21539458
+          RawY: 15730364
+        normal:
+        - RawX: 0
+          RawY: -1048575
+        - RawX: 994758
+          RawY: 331586
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1001239
+          RawY: -311497
+        vertsCount: 4
+        index: 41
+      - verts:
+        - RawX: -22801285
+          RawY: 9358541
+        - RawX: -22276997
+          RawY: 9882829
+        - RawX: -25947013
+          RawY: 21679309
+        edges:
+        - pointA:
+            RawX: -22801285
+            RawY: 9358541
+          pointB:
+            RawX: -22276997
+            RawY: 9882829
+          selfPolygonIndex: 42
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -25947013
+            RawY: 21679309
+          pointB:
+            RawX: -22276997
+            RawY: 9882829
+          selfPolygonIndex: 42
+          otherPolygonIndex: 41
+          distance:
+            Raw: 2988218
+          width:
+            Raw: 12354184
+          hasOther: 1
+        - pointA:
+            RawX: -25947013
+            RawY: 21679309
+          pointB:
+            RawX: -22801285
+            RawY: 9358541
+          selfPolygonIndex: 42
+          otherPolygonIndex: 43
+          distance:
+            Raw: 12600632
+          width:
+            Raw: 12716008
+          hasOther: 1
+        centroid:
+          RawX: -23675001
+          RawY: 13640169
+        normal:
+        - RawX: 741455
+          RawY: -741455
+        - RawX: 1001238
+          RawY: 311496
+        - RawX: -1015976
+          RawY: -259398
+        vertsCount: 3
+        index: 42
+      - verts:
+        - RawX: -22801285
+          RawY: 9358541
+        - RawX: -25947013
+          RawY: 21679309
+        - RawX: -25947013
+          RawY: -26030899
+        - RawX: -22801285
+          RawY: 4115661
+        edges:
+        - pointA:
+            RawX: -25947013
+            RawY: 21679309
+          pointB:
+            RawX: -22801285
+            RawY: 9358541
+          selfPolygonIndex: 43
+          otherPolygonIndex: 42
+          distance:
+            Raw: 12600632
+          width:
+            Raw: 12716008
+          hasOther: 1
+        - pointA:
+            RawX: -25947013
+            RawY: 21679309
+          pointB:
+            RawX: -25947013
+            RawY: -26030899
+          selfPolygonIndex: 43
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 47710176
+          hasOther: 0
+        - pointA:
+            RawX: -25947013
+            RawY: -26030899
+          pointB:
+            RawX: -22801285
+            RawY: 4115661
+          selfPolygonIndex: 43
+          otherPolygonIndex: 44
+          distance:
+            Raw: 7283608
+          width:
+            Raw: 30310240
+          hasOther: 1
+        - pointA:
+            RawX: -22801285
+            RawY: 4115661
+          pointB:
+            RawX: -22801285
+            RawY: 9358541
+          selfPolygonIndex: 43
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        centroid:
+          RawX: -24793540
+          RawY: 1089277
+        normal:
+        - RawX: 1015975
+          RawY: 259398
+        - RawX: -1048548
+          RawY: 0
+        - RawX: 1042906
+          RawY: -108825
+        - RawX: 1048575
+          RawY: 0
+        vertsCount: 4
+        index: 43
+      - verts:
+        - RawX: -22276997
+          RawY: 3591373
+        - RawX: -22801285
+          RawY: 4115661
+        - RawX: -25947013
+          RawY: -26030899
+        edges:
+        - pointA:
+            RawX: -22276997
+            RawY: 3591373
+          pointB:
+            RawX: -22801285
+            RawY: 4115661
+          selfPolygonIndex: 44
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -25947013
+            RawY: -26030899
+          pointB:
+            RawX: -22801285
+            RawY: 4115661
+          selfPolygonIndex: 44
+          otherPolygonIndex: 43
+          distance:
+            Raw: 7283608
+          width:
+            Raw: 30310240
+          hasOther: 1
+        - pointA:
+            RawX: -25947013
+            RawY: -26030899
+          pointB:
+            RawX: -22276997
+            RawY: 3591373
+          selfPolygonIndex: 44
+          otherPolygonIndex: 45
+          distance:
+            Raw: 2158910
+          width:
+            Raw: 29848752
+          hasOther: 1
+        centroid:
+          RawX: -23675051
+          RawY: -6107943
+        normal:
+        - RawX: 741455
+          RawY: 741455
+        - RawX: -1042907
+          RawY: 108825
+        - RawX: 1040617
+          RawY: -128926
+        vertsCount: 3
+        index: 44
+      - verts:
+        - RawX: -17034117
+          RawY: 3591373
+        - RawX: -22276997
+          RawY: 3591373
+        - RawX: -25947013
+          RawY: -26030899
+        - RawX: -22801285
+          RawY: -17904435
+        edges:
+        - pointA:
+            RawX: -17034117
+            RawY: 3591373
+          pointB:
+            RawX: -22276997
+            RawY: 3591373
+          selfPolygonIndex: 45
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -25947013
+            RawY: -26030899
+          pointB:
+            RawX: -22276997
+            RawY: 3591373
+          selfPolygonIndex: 45
+          otherPolygonIndex: 44
+          distance:
+            Raw: 2158910
+          width:
+            Raw: 29848752
+          hasOther: 1
+        - pointA:
+            RawX: -25947013
+            RawY: -26030899
+          pointB:
+            RawX: -22801285
+            RawY: -17904435
+          selfPolygonIndex: 45
+          otherPolygonIndex: 58
+          distance:
+            Raw: 15375104
+          width:
+            Raw: 8714064
+          hasOther: 1
+        - pointA:
+            RawX: -22801285
+            RawY: -17904435
+          pointB:
+            RawX: -17034117
+            RawY: 3591373
+          selfPolygonIndex: 45
+          otherPolygonIndex: 59
+          distance:
+            Raw: 3038336
+          width:
+            Raw: 22256000
+          hasOther: 1
+        centroid:
+          RawX: -21771678
+          RawY: -7126802
+        normal:
+        - RawX: 0
+          RawY: 1048575
+        - RawX: -1040617
+          RawY: 128926
+        - RawX: 977864
+          RawY: -378528
+        - RawX: 1012741
+          RawY: -271711
+        vertsCount: 4
+        index: 45
+      - verts:
+        - RawX: 3150971
+          RawY: -17642291
+        - RawX: -4975493
+          RawY: -15545139
+        - RawX: -5499781
+          RawY: -16069427
+        edges:
+        - pointA:
+            RawX: -4975493
+            RawY: -15545139
+          pointB:
+            RawX: 3150971
+            RawY: -17642291
+          selfPolygonIndex: 46
+          otherPolygonIndex: 20
+          distance:
+            Raw: 1246859
+          width:
+            Raw: 8392696
+          hasOther: 1
+        - pointA:
+            RawX: -4975493
+            RawY: -15545139
+          pointB:
+            RawX: -5499781
+            RawY: -16069427
+          selfPolygonIndex: 46
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 3150971
+            RawY: -17642291
+          pointB:
+            RawX: -5499781
+            RawY: -16069427
+          selfPolygonIndex: 46
+          otherPolygonIndex: 19
+          distance:
+            Raw: 5622848
+          width:
+            Raw: 8792576
+          hasOther: 1
+        centroid:
+          RawX: -2441426
+          RawY: -16418895
+        normal:
+        - RawX: 262016
+          RawY: 1015312
+        - RawX: -741455
+          RawY: 741455
+        - RawX: -187574
+          RawY: -1031655
+        vertsCount: 3
+        index: 46
+      - verts:
+        - RawX: -16509829
+          RawY: -17904435
+        - RawX: -14412677
+          RawY: -16069427
+        - RawX: -14936965
+          RawY: -15545139
+        - RawX: -17034117
+          RawY: -17380147
+        edges:
+        - pointA:
+            RawX: -14412677
+            RawY: -16069427
+          pointB:
+            RawX: -16509829
+            RawY: -17904435
+          selfPolygonIndex: 47
+          otherPolygonIndex: 19
+          distance:
+            Raw: 9251880
+          width:
+            Raw: 2786628
+          hasOther: 1
+        - pointA:
+            RawX: -14412677
+            RawY: -16069427
+          pointB:
+            RawX: -14936965
+            RawY: -15545139
+          selfPolygonIndex: 47
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -17034117
+            RawY: -17380147
+          pointB:
+            RawX: -14936965
+            RawY: -15545139
+          selfPolygonIndex: 47
+          otherPolygonIndex: 21
+          distance:
+            Raw: 4306100
+          width:
+            Raw: 2786628
+          hasOther: 1
+        - pointA:
+            RawX: -17034117
+            RawY: -17380147
+          pointB:
+            RawX: -16509829
+            RawY: -17904435
+          selfPolygonIndex: 47
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        centroid:
+          RawX: -15723287
+          RawY: -16724670
+        normal:
+        - RawX: 690492
+          RawY: -789134
+        - RawX: 741455
+          RawY: 741455
+        - RawX: -690493
+          RawY: 789134
+        - RawX: -741455
+          RawY: -741455
+        vertsCount: 4
+        index: 47
+      - verts:
+        - RawX: 25957499
+          RawY: -26030899
+        - RawX: 22025339
+          RawY: -20001587
+        - RawX: 16782459
+          RawY: -20001587
+        - RawX: 9442427
+          RawY: -22885171
+        - RawX: 8918139
+          RawY: -23409459
+        edges:
+        - pointA:
+            RawX: 22025339
+            RawY: -20001587
+          pointB:
+            RawX: 25957499
+            RawY: -26030899
+          selfPolygonIndex: 48
+          otherPolygonIndex: 13
+          distance:
+            Raw: 5269796
+          width:
+            Raw: 7198224
+          hasOther: 1
+        - pointA:
+            RawX: 22025339
+            RawY: -20001587
+          pointB:
+            RawX: 16782459
+            RawY: -20001587
+          selfPolygonIndex: 48
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 9442427
+            RawY: -22885171
+          pointB:
+            RawX: 16782459
+            RawY: -20001587
+          selfPolygonIndex: 48
+          otherPolygonIndex: 31
+          distance:
+            Raw: 4632668
+          width:
+            Raw: 7886132
+          hasOther: 1
+        - pointA:
+            RawX: 9442427
+            RawY: -22885171
+          pointB:
+            RawX: 8918139
+            RawY: -23409459
+          selfPolygonIndex: 48
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 8918139
+            RawY: -23409459
+          pointB:
+            RawX: 25957499
+            RawY: -26030899
+          selfPolygonIndex: 48
+          otherPolygonIndex: 50
+          distance:
+            Raw: 16196016
+          width:
+            Raw: 17239824
+          hasOther: 1
+        centroid:
+          RawX: 18330914
+          RawY: -22806161
+        normal:
+        - RawX: 878295
+          RawY: 572801
+        - RawX: 0
+          RawY: 1048575
+        - RawX: -383414
+          RawY: 975961
+        - RawX: -741455
+          RawY: 741455
+        - RawX: -159443
+          RawY: -1036377
+        vertsCount: 5
+        index: 48
+      - verts:
+        - RawX: -22276997
+          RawY: -17380147
+        - RawX: -15985541
+          RawY: -5583667
+        - RawX: -16509829
+          RawY: -5059379
+        edges:
+        - pointA:
+            RawX: -15985541
+            RawY: -5583667
+          pointB:
+            RawX: -22276997
+            RawY: -17380147
+          selfPolygonIndex: 49
+          otherPolygonIndex: 21
+          distance:
+            Raw: 3542920
+          width:
+            Raw: 13369336
+          hasOther: 1
+        - pointA:
+            RawX: -15985541
+            RawY: -5583667
+          pointB:
+            RawX: -16509829
+            RawY: -5059379
+          selfPolygonIndex: 49
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -16509829
+            RawY: -5059379
+          pointB:
+            RawX: -22276997
+            RawY: -17380147
+          selfPolygonIndex: 49
+          otherPolygonIndex: 59
+          distance:
+            Raw: 2822822
+          width:
+            Raw: 13603728
+          hasOther: 1
+        centroid:
+          RawX: -18257417
+          RawY: -9341046
+        normal:
+        - RawX: 925211
+          RawY: -493446
+        - RawX: 741455
+          RawY: 741455
+        - RawX: -949682
+          RawY: 444532
+        vertsCount: 3
+        index: 49
+      - verts:
+        - RawX: -25947013
+          RawY: -26030899
+        - RawX: 25957499
+          RawY: -26030899
+        - RawX: 8918139
+          RawY: -23409459
+        - RawX: 3675259
+          RawY: -23409459
+        edges:
+        - pointA:
+            RawX: -25947013
+            RawY: -26030899
+          pointB:
+            RawX: 25957499
+            RawY: -26030899
+          selfPolygonIndex: 50
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 51904512
+          hasOther: 0
+        - pointA:
+            RawX: 8918139
+            RawY: -23409459
+          pointB:
+            RawX: 25957499
+            RawY: -26030899
+          selfPolygonIndex: 50
+          otherPolygonIndex: 48
+          distance:
+            Raw: 16196016
+          width:
+            Raw: 17239824
+          hasOther: 1
+        - pointA:
+            RawX: 8918139
+            RawY: -23409459
+          pointB:
+            RawX: 3675259
+            RawY: -23409459
+          selfPolygonIndex: 50
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 3675259
+            RawY: -23409459
+          pointB:
+            RawX: -25947013
+            RawY: -26030899
+          selfPolygonIndex: 50
+          otherPolygonIndex: 51
+          distance:
+            Raw: 13572472
+          width:
+            Raw: 29738032
+          hasOther: 1
+        centroid:
+          RawX: 2294651
+          RawY: -25075360
+        normal:
+        - RawX: 0
+          RawY: -1048559
+        - RawX: 159442
+          RawY: 1036376
+        - RawX: 0
+          RawY: 1048575
+        - RawX: -92433
+          RawY: 1044487
+        vertsCount: 4
+        index: 50
+      - verts:
+        - RawX: -25947013
+          RawY: -26030899
+        - RawX: 3675259
+          RawY: -23409459
+        - RawX: 3150971
+          RawY: -22885171
+        - RawX: -17034117
+          RawY: -23671603
+        edges:
+        - pointA:
+            RawX: 3675259
+            RawY: -23409459
+          pointB:
+            RawX: -25947013
+            RawY: -26030899
+          selfPolygonIndex: 51
+          otherPolygonIndex: 50
+          distance:
+            Raw: 13572472
+          width:
+            Raw: 29738032
+          hasOther: 1
+        - pointA:
+            RawX: 3675259
+            RawY: -23409459
+          pointB:
+            RawX: 3150971
+            RawY: -22885171
+          selfPolygonIndex: 51
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 3150971
+            RawY: -22885171
+          pointB:
+            RawX: -17034117
+            RawY: -23671603
+          selfPolygonIndex: 51
+          otherPolygonIndex: 55
+          distance:
+            Raw: 1456373
+          width:
+            Raw: 20200400
+          hasOther: 1
+        - pointA:
+            RawX: -17034117
+            RawY: -23671603
+          pointB:
+            RawX: -25947013
+            RawY: -26030899
+          selfPolygonIndex: 51
+          otherPolygonIndex: 56
+          distance:
+            Raw: 10508992
+          width:
+            Raw: 9219864
+          hasOther: 1
+        centroid:
+          RawX: -11247572
+          RawY: -24169622
+        normal:
+        - RawX: 92432
+          RawY: -1044488
+        - RawX: 741455
+          RawY: 741455
+        - RawX: -40823
+          RawY: 1047777
+        - RawX: -268322
+          RawY: 1013659
+        vertsCount: 4
+        index: 51
+      - verts:
+        - RawX: 7607419
+          RawY: -2700083
+        - RawX: 3150971
+          RawY: 3329229
+        - RawX: -1567621
+          RawY: 3329229
+        edges:
+        - pointA:
+            RawX: 3150971
+            RawY: 3329229
+          pointB:
+            RawX: 7607419
+            RawY: -2700083
+          selfPolygonIndex: 52
+          otherPolygonIndex: 30
+          distance:
+            Raw: 2920552
+          width:
+            Raw: 7497500
+          hasOther: 1
+        - pointA:
+            RawX: 3150971
+            RawY: 3329229
+          pointB:
+            RawX: -1567621
+            RawY: 3329229
+          selfPolygonIndex: 52
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 7607419
+            RawY: -2700083
+          pointB:
+            RawX: -1567621
+            RawY: 3329229
+          selfPolygonIndex: 52
+          otherPolygonIndex: 0
+          distance:
+            Raw: 5002248
+          width:
+            Raw: 10978792
+          hasOther: 1
+        centroid:
+          RawX: 3063571
+          RawY: 1319450
+        normal:
+        - RawX: 843237
+          RawY: 623262
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -575851
+          RawY: -876295
+        vertsCount: 3
+        index: 52
+      - verts:
+        - RawX: -7334789
+          RawY: 9096397
+        - RawX: -12577669
+          RawY: 9096397
+        - RawX: -16509829
+          RawY: 4115661
+        - RawX: -2616197
+          RawY: 3853517
+        edges:
+        - pointA:
+            RawX: -7334789
+            RawY: 9096397
+          pointB:
+            RawX: -12577669
+            RawY: 9096397
+          selfPolygonIndex: 53
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -16509829
+            RawY: 4115661
+          pointB:
+            RawX: -12577669
+            RawY: 9096397
+          selfPolygonIndex: 53
+          otherPolygonIndex: 5
+          distance:
+            Raw: 5606116
+          width:
+            Raw: 6345832
+          hasOther: 1
+        - pointA:
+            RawX: -16509829
+            RawY: 4115661
+          pointB:
+            RawX: -2616197
+            RawY: 3853517
+          selfPolygonIndex: 53
+          otherPolygonIndex: 54
+          distance:
+            Raw: 3730878
+          width:
+            Raw: 13896104
+          hasOther: 1
+        - pointA:
+            RawX: -7334789
+            RawY: 9096397
+          pointB:
+            RawX: -2616197
+            RawY: 3853517
+          selfPolygonIndex: 53
+          otherPolygonIndex: 34
+          distance:
+            Raw: 5562076
+          width:
+            Raw: 7053572
+          hasOther: 1
+        centroid:
+          RawX: -9707328
+          RawY: 6155366
+        normal:
+        - RawX: 0
+          RawY: 1048575
+        - RawX: -823009
+          RawY: 649743
+        - RawX: -19781
+          RawY: -1048380
+        - RawX: 779400
+          RawY: 701460
+        vertsCount: 4
+        index: 53
+      - verts:
+        - RawX: -2091909
+          RawY: 3329229
+        - RawX: -2616197
+          RawY: 3853517
+        - RawX: -16509829
+          RawY: 4115661
+        - RawX: -17034117
+          RawY: 3591373
+        - RawX: -15985541
+          RawY: 707789
+        - RawX: -10742661
+          RawY: 707789
+        edges:
+        - pointA:
+            RawX: -2091909
+            RawY: 3329229
+          pointB:
+            RawX: -2616197
+            RawY: 3853517
+          selfPolygonIndex: 54
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -16509829
+            RawY: 4115661
+          pointB:
+            RawX: -2616197
+            RawY: 3853517
+          selfPolygonIndex: 54
+          otherPolygonIndex: 53
+          distance:
+            Raw: 3730878
+          width:
+            Raw: 13896104
+          hasOther: 1
+        - pointA:
+            RawX: -16509829
+            RawY: 4115661
+          pointB:
+            RawX: -17034117
+            RawY: 3591373
+          selfPolygonIndex: 54
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -17034117
+            RawY: 3591373
+          pointB:
+            RawX: -15985541
+            RawY: 707789
+          selfPolygonIndex: 54
+          otherPolygonIndex: 60
+          distance:
+            Raw: 5758896
+          width:
+            Raw: 3068316
+          hasOther: 1
+        - pointA:
+            RawX: -15985541
+            RawY: 707789
+          pointB:
+            RawX: -10742661
+            RawY: 707789
+          selfPolygonIndex: 54
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -10742661
+            RawY: 707789
+          pointB:
+            RawX: -2091909
+            RawY: 3329229
+          selfPolygonIndex: 54
+          otherPolygonIndex: 61
+          distance:
+            Raw: 3394232
+          width:
+            Raw: 9039216
+          hasOther: 1
+        centroid:
+          RawX: -10859325
+          RawY: 2606794
+        normal:
+        - RawX: 741455
+          RawY: 741455
+        - RawX: 19780
+          RawY: 1048379
+        - RawX: -741455
+          RawY: 741455
+        - RawX: -985444
+          RawY: -358343
+        - RawX: 0
+          RawY: -1048575
+        - RawX: 304092
+          RawY: -1003506
+        vertsCount: 6
+        index: 54
+      - verts:
+        - RawX: 3150971
+          RawY: -22885171
+        - RawX: -16509829
+          RawY: -23147315
+        - RawX: -17034117
+          RawY: -23671603
+        edges:
+        - pointA:
+            RawX: -16509829
+            RawY: -23147315
+          pointB:
+            RawX: 3150971
+            RawY: -22885171
+          selfPolygonIndex: 55
+          otherPolygonIndex: 19
+          distance:
+            Raw: 4705804
+          width:
+            Raw: 19662544
+          hasOther: 1
+        - pointA:
+            RawX: -16509829
+            RawY: -23147315
+          pointB:
+            RawX: -17034117
+            RawY: -23671603
+          selfPolygonIndex: 55
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: 3150971
+            RawY: -22885171
+          pointB:
+            RawX: -17034117
+            RawY: -23671603
+          selfPolygonIndex: 55
+          otherPolygonIndex: 51
+          distance:
+            Raw: 1456373
+          width:
+            Raw: 20200400
+          hasOther: 1
+        centroid:
+          RawX: -10130962
+          RawY: -23234631
+        normal:
+        - RawX: -13980
+          RawY: 1048481
+        - RawX: -741455
+          RawY: 741455
+        - RawX: 40822
+          RawY: -1047778
+        vertsCount: 3
+        index: 55
+      - verts:
+        - RawX: -25947013
+          RawY: -26030899
+        - RawX: -17034117
+          RawY: -23671603
+        - RawX: -22276997
+          RawY: -23671603
+        edges:
+        - pointA:
+            RawX: -17034117
+            RawY: -23671603
+          pointB:
+            RawX: -25947013
+            RawY: -26030899
+          selfPolygonIndex: 56
+          otherPolygonIndex: 51
+          distance:
+            Raw: 10508992
+          width:
+            Raw: 9219864
+          hasOther: 1
+        - pointA:
+            RawX: -17034117
+            RawY: -23671603
+          pointB:
+            RawX: -22276997
+            RawY: -23671603
+          selfPolygonIndex: 56
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -22276997
+            RawY: -23671603
+          pointB:
+            RawX: -25947013
+            RawY: -26030899
+          selfPolygonIndex: 56
+          otherPolygonIndex: 57
+          distance:
+            Raw: 1930281
+          width:
+            Raw: 4362944
+          hasOther: 1
+        centroid:
+          RawX: -21752617
+          RawY: -24457931
+        normal:
+        - RawX: 268321
+          RawY: -1013659
+        - RawX: 0
+          RawY: 1048575
+        - RawX: -567025
+          RawY: 882038
+        vertsCount: 3
+        index: 56
+      - verts:
+        - RawX: -25947013
+          RawY: -26030899
+        - RawX: -22276997
+          RawY: -23671603
+        - RawX: -22801285
+          RawY: -23147315
+        edges:
+        - pointA:
+            RawX: -22276997
+            RawY: -23671603
+          pointB:
+            RawX: -25947013
+            RawY: -26030899
+          selfPolygonIndex: 57
+          otherPolygonIndex: 56
+          distance:
+            Raw: 1930281
+          width:
+            Raw: 4362944
+          hasOther: 1
+        - pointA:
+            RawX: -22276997
+            RawY: -23671603
+          pointB:
+            RawX: -22801285
+            RawY: -23147315
+          selfPolygonIndex: 57
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -22801285
+            RawY: -23147315
+          pointB:
+            RawX: -25947013
+            RawY: -26030899
+          selfPolygonIndex: 57
+          otherPolygonIndex: 58
+          distance:
+            Raw: 1930244
+          width:
+            Raw: 4267392
+          hasOther: 1
+        centroid:
+          RawX: -23674969
+          RawY: -24283139
+        normal:
+        - RawX: 567024
+          RawY: -882039
+        - RawX: 741455
+          RawY: 741455
+        - RawX: -708549
+          RawY: 772962
+        vertsCount: 3
+        index: 57
+      - verts:
+        - RawX: -25947013
+          RawY: -26030899
+        - RawX: -22801285
+          RawY: -23147315
+        - RawX: -22801285
+          RawY: -17904435
+        edges:
+        - pointA:
+            RawX: -22801285
+            RawY: -23147315
+          pointB:
+            RawX: -25947013
+            RawY: -26030899
+          selfPolygonIndex: 58
+          otherPolygonIndex: 57
+          distance:
+            Raw: 1930244
+          width:
+            Raw: 4267392
+          hasOther: 1
+        - pointA:
+            RawX: -22801285
+            RawY: -23147315
+          pointB:
+            RawX: -22801285
+            RawY: -17904435
+          selfPolygonIndex: 58
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -25947013
+            RawY: -26030899
+          pointB:
+            RawX: -22801285
+            RawY: -17904435
+          selfPolygonIndex: 58
+          otherPolygonIndex: 45
+          distance:
+            Raw: 15375104
+          width:
+            Raw: 8714064
+          hasOther: 1
+        centroid:
+          RawX: -23849802
+          RawY: -22360828
+        normal:
+        - RawX: 708548
+          RawY: -772962
+        - RawX: 1048575
+          RawY: 0
+        - RawX: -977864
+          RawY: 378528
+        vertsCount: 3
+        index: 58
+      - verts:
+        - RawX: -17034117
+          RawY: 3591373
+        - RawX: -22801285
+          RawY: -17904435
+        - RawX: -22276997
+          RawY: -17380147
+        - RawX: -16509829
+          RawY: -5059379
+        - RawX: -16509829
+          RawY: 183501
+        edges:
+        - pointA:
+            RawX: -22801285
+            RawY: -17904435
+          pointB:
+            RawX: -17034117
+            RawY: 3591373
+          selfPolygonIndex: 59
+          otherPolygonIndex: 45
+          distance:
+            Raw: 3038336
+          width:
+            Raw: 22256000
+          hasOther: 1
+        - pointA:
+            RawX: -22801285
+            RawY: -17904435
+          pointB:
+            RawX: -22276997
+            RawY: -17380147
+          selfPolygonIndex: 59
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -16509829
+            RawY: -5059379
+          pointB:
+            RawX: -22276997
+            RawY: -17380147
+          selfPolygonIndex: 59
+          otherPolygonIndex: 49
+          distance:
+            Raw: 2822822
+          width:
+            Raw: 13603728
+          hasOther: 1
+        - pointA:
+            RawX: -16509829
+            RawY: -5059379
+          pointB:
+            RawX: -16509829
+            RawY: 183501
+          selfPolygonIndex: 59
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: -16509829
+            RawY: 183501
+          pointB:
+            RawX: -17034117
+            RawY: 3591373
+          selfPolygonIndex: 59
+          otherPolygonIndex: 60
+          distance:
+            Raw: 8377156
+          width:
+            Raw: 3447964
+          hasOther: 1
+        centroid:
+          RawX: -18785171
+          RawY: -6567996
+        normal:
+        - RawX: -1012741
+          RawY: 271711
+        - RawX: 741455
+          RawY: -741455
+        - RawX: 949682
+          RawY: -444532
+        - RawX: 1048575
+          RawY: 0
+        - RawX: 1036382
+          RawY: 159443
+        vertsCount: 5
+        index: 59
+      - verts:
+        - RawX: -17034117
+          RawY: 3591373
+        - RawX: -16509829
+          RawY: 183501
+        - RawX: -15985541
+          RawY: 707789
+        edges:
+        - pointA:
+            RawX: -16509829
+            RawY: 183501
+          pointB:
+            RawX: -17034117
+            RawY: 3591373
+          selfPolygonIndex: 60
+          otherPolygonIndex: 59
+          distance:
+            Raw: 8377156
+          width:
+            Raw: 3447964
+          hasOther: 1
+        - pointA:
+            RawX: -16509829
+            RawY: 183501
+          pointB:
+            RawX: -15985541
+            RawY: 707789
+          selfPolygonIndex: 60
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -17034117
+            RawY: 3591373
+          pointB:
+            RawX: -15985541
+            RawY: 707789
+          selfPolygonIndex: 60
+          otherPolygonIndex: 54
+          distance:
+            Raw: 5758896
+          width:
+            Raw: 3068316
+          hasOther: 1
+        centroid:
+          RawX: -16509729
+          RawY: 1494207
+        normal:
+        - RawX: -1036383
+          RawY: -159444
+        - RawX: 741455
+          RawY: -741455
+        - RawX: 985443
+          RawY: 358343
+        vertsCount: 3
+        index: 60
+      - verts:
+        - RawX: -2091909
+          RawY: 3329229
+        - RawX: -10742661
+          RawY: 707789
+        - RawX: -10218373
+          RawY: 183501
+        edges:
+        - pointA:
+            RawX: -10742661
+            RawY: 707789
+          pointB:
+            RawX: -2091909
+            RawY: 3329229
+          selfPolygonIndex: 61
+          otherPolygonIndex: 54
+          distance:
+            Raw: 3394232
+          width:
+            Raw: 9039216
+          hasOther: 1
+        - pointA:
+            RawX: -10742661
+            RawY: 707789
+          pointB:
+            RawX: -10218373
+            RawY: 183501
+          selfPolygonIndex: 61
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -2091909
+            RawY: 3329229
+          pointB:
+            RawX: -10218373
+            RawY: 183501
+          selfPolygonIndex: 61
+          otherPolygonIndex: 22
+          distance:
+            Raw: 2057345
+          width:
+            Raw: 8714064
+          hasOther: 1
+        centroid:
+          RawX: -7684280
+          RawY: 1406832
+        normal:
+        - RawX: -304093
+          RawY: 1003505
+        - RawX: -741455
+          RawY: -741455
+        - RawX: 378528
+          RawY: -977864
+        vertsCount: 3
+        index: 61
+      - verts:
+        - RawX: -2091909
+          RawY: 3329229
+        - RawX: -5499781
+          RawY: -2962227
+        - RawX: -4975493
+          RawY: -3486515
+        edges:
+        - pointA:
+            RawX: -5499781
+            RawY: -2962227
+          pointB:
+            RawX: -2091909
+            RawY: 3329229
+          selfPolygonIndex: 62
+          otherPolygonIndex: 22
+          distance:
+            Raw: 2561776
+          width:
+            Raw: 7155136
+          hasOther: 1
+        - pointA:
+            RawX: -5499781
+            RawY: -2962227
+          pointB:
+            RawX: -4975493
+            RawY: -3486515
+          selfPolygonIndex: 62
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -2091909
+            RawY: 3329229
+          pointB:
+            RawX: -4975493
+            RawY: -3486515
+          selfPolygonIndex: 62
+          otherPolygonIndex: 0
+          distance:
+            Raw: 6120844
+          width:
+            Raw: 7400636
+          hasOther: 1
+        centroid:
+          RawX: -4189047
+          RawY: -1039834
+        normal:
+        - RawX: -922002
+          RawY: 499417
+        - RawX: -741455
+          RawY: -741455
+        - RawX: 965698
+          RawY: -408565
+        vertsCount: 3
+        index: 62
+      - verts:
+        - RawX: 13374587
+          RawY: -3224371
+        - RawX: 8131707
+          RawY: -3224371
+        - RawX: 7345275
+          RawY: -8205107
+        edges:
+        - pointA:
+            RawX: 13374587
+            RawY: -3224371
+          pointB:
+            RawX: 8131707
+            RawY: -3224371
+          selfPolygonIndex: 63
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 5242880
+          hasOther: 0
+        - pointA:
+            RawX: 7345275
+            RawY: -8205107
+          pointB:
+            RawX: 8131707
+            RawY: -3224371
+          selfPolygonIndex: 63
+          otherPolygonIndex: 0
+          distance:
+            Raw: 8296424
+          width:
+            Raw: 5042440
+          hasOther: 1
+        - pointA:
+            RawX: 13374587
+            RawY: -3224371
+          pointB:
+            RawX: 7345275
+            RawY: -8205107
+          selfPolygonIndex: 63
+          otherPolygonIndex: 25
+          distance:
+            Raw: 2844932
+          width:
+            Raw: 7820504
+          hasOther: 1
+        centroid:
+          RawX: 9617162
+          RawY: -4884603
+        normal:
+        - RawX: 0
+          RawY: 1048575
+        - RawX: -1035743
+          RawY: 163538
+        - RawX: 667816
+          RawY: -808410
+        vertsCount: 3
+        index: 63
+      - verts:
+        - RawX: 13374587
+          RawY: -3224371
+        - RawX: 21763195
+          RawY: 3591373
+        - RawX: 13898875
+          RawY: -2700083
+        edges:
+        - pointA:
+            RawX: 21763195
+            RawY: 3591373
+          pointB:
+            RawX: 13374587
+            RawY: -3224371
+          selfPolygonIndex: 64
+          otherPolygonIndex: 25
+          distance:
+            Raw: 5319352
+          width:
+            Raw: 10808472
+          hasOther: 1
+        - pointA:
+            RawX: 13898875
+            RawY: -2700083
+          pointB:
+            RawX: 21763195
+            RawY: 3591373
+          selfPolygonIndex: 64
+          otherPolygonIndex: 1
+          distance:
+            Raw: 2186768
+          width:
+            Raw: 10071240
+          hasOther: 1
+        - pointA:
+            RawX: 13898875
+            RawY: -2700083
+          pointB:
+            RawX: 13374587
+            RawY: -3224371
+          selfPolygonIndex: 64
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        centroid:
+          RawX: 16345327
+          RawY: -777693
+        normal:
+        - RawX: 661219
+          RawY: -813808
+        - RawX: -655038
+          RawY: 818797
+        - RawX: -741455
+          RawY: 741455
+        vertsCount: 3
+        index: 64
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 1
+    indicsCount: 4
+    graph:
+      polygons:
+      - verts:
+        - RawX: -21228421
+          RawY: 22465741
+        - RawX: -21228421
+          RawY: 27184333
+        - RawX: -25947013
+          RawY: 27184333
+        - RawX: -25947013
+          RawY: 22465741
+        edges:
+        - pointA:
+            RawX: -21228421
+            RawY: 22465741
+          pointB:
+            RawX: -21228421
+            RawY: 27184333
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -21228421
+            RawY: 27184333
+          pointB:
+            RawX: -25947013
+            RawY: 27184333
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -25947013
+            RawY: 27184333
+          pointB:
+            RawX: -25947013
+            RawY: 22465741
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -25947013
+            RawY: 22465741
+          pointB:
+            RawX: -21228421
+            RawY: 22465741
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        centroid:
+          RawX: -23587449
+          RawY: 24824754
+        normal:
+        - RawX: 1048576
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1048577
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        vertsCount: 4
+        index: 0
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 1
+    indicsCount: 4
+    graph:
+      polygons:
+      - verts:
+        - RawX: -17296261
+          RawY: -22885171
+        - RawX: -17296261
+          RawY: -18166579
+        - RawX: -22014853
+          RawY: -18166579
+        - RawX: -22014853
+          RawY: -22885171
+        edges:
+        - pointA:
+            RawX: -17296261
+            RawY: -22885171
+          pointB:
+            RawX: -17296261
+            RawY: -18166579
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -17296261
+            RawY: -18166579
+          pointB:
+            RawX: -22014853
+            RawY: -18166579
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -22014853
+            RawY: -18166579
+          pointB:
+            RawX: -22014853
+            RawY: -22885171
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -22014853
+            RawY: -22885171
+          pointB:
+            RawX: -17296261
+            RawY: -22885171
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        centroid:
+          RawX: -19655334
+          RawY: -20525642
+        normal:
+        - RawX: 1048576
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1048577
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        vertsCount: 4
+        index: 0
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 1
+    indicsCount: 4
+    graph:
+      polygons:
+      - verts:
+        - RawX: -17296261
+          RawY: 4377805
+        - RawX: -17296261
+          RawY: 9096397
+        - RawX: -22014853
+          RawY: 9096397
+        - RawX: -22014853
+          RawY: 4377805
+        edges:
+        - pointA:
+            RawX: -17296261
+            RawY: 4377805
+          pointB:
+            RawX: -17296261
+            RawY: 9096397
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -17296261
+            RawY: 9096397
+          pointB:
+            RawX: -22014853
+            RawY: 9096397
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -22014853
+            RawY: 9096397
+          pointB:
+            RawX: -22014853
+            RawY: 4377805
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -22014853
+            RawY: 4377805
+          pointB:
+            RawX: -17296261
+            RawY: 4377805
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        centroid:
+          RawX: -19655334
+          RawY: 6737024
+        normal:
+        - RawX: 1048576
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1048577
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        vertsCount: 4
+        index: 0
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 6
+    indicsCount: 26
+    graph:
+      polygons:
+      - verts:
+        - RawX: -11004805
+          RawY: -3224371
+        - RawX: -14150533
+          RawY: -5321523
+        - RawX: -14150533
+          RawY: -15282995
+        - RawX: -5761925
+          RawY: -15282995
+        - RawX: -5761925
+          RawY: -13447987
+        - RawX: -10480517
+          RawY: -3748659
+        edges:
+        - pointA:
+            RawX: -11004805
+            RawY: -3224371
+          pointB:
+            RawX: -14150533
+            RawY: -5321523
+          selfPolygonIndex: 0
+          otherPolygonIndex: 4
+          distance:
+            Raw: 6506016
+          width:
+            Raw: 3780694
+          hasOther: 1
+        - pointA:
+            RawX: -14150533
+            RawY: -5321523
+          pointB:
+            RawX: -14150533
+            RawY: -15282995
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 9961464
+          hasOther: 0
+        - pointA:
+            RawX: -14150533
+            RawY: -15282995
+          pointB:
+            RawX: -5761925
+            RawY: -15282995
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 8388608
+          hasOther: 0
+        - pointA:
+            RawX: -5761925
+            RawY: -15282995
+          pointB:
+            RawX: -5761925
+            RawY: -13447987
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 1835007
+          hasOther: 0
+        - pointA:
+            RawX: -5761925
+            RawY: -13447987
+          pointB:
+            RawX: -10480517
+            RawY: -3748659
+          selfPolygonIndex: 0
+          otherPolygonIndex: 5
+          distance:
+            Raw: 4069736
+          width:
+            Raw: 10786192
+          hasOther: 1
+        - pointA:
+            RawX: -10480517
+            RawY: -3748659
+          pointB:
+            RawX: -11004805
+            RawY: -3224371
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        centroid:
+          RawX: -10702709
+          RawY: -10422894
+        normal:
+        - RawX: -581644
+          RawY: 872466
+        - RawX: -1048572
+          RawY: 0
+        - RawX: 0
+          RawY: -1048576
+        - RawX: 1048575
+          RawY: 0
+        - RawX: 942908
+          RawY: 458712
+        - RawX: 741455
+          RawY: 741455
+        vertsCount: 6
+        index: 0
+      - verts:
+        - RawX: -5237637
+          RawY: -12923699
+        - RawX: -2091909
+          RawY: -12923699
+        - RawX: -2091909
+          RawY: -8205107
+        - RawX: -5237637
+          RawY: -8205107
+        edges:
+        - pointA:
+            RawX: -5237637
+            RawY: -12923699
+          pointB:
+            RawX: -2091909
+            RawY: -12923699
+          selfPolygonIndex: 1
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 3145726
+          hasOther: 0
+        - pointA:
+            RawX: -2091909
+            RawY: -12923699
+          pointB:
+            RawX: -2091909
+            RawY: -8205107
+          selfPolygonIndex: 1
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -2091909
+            RawY: -8205107
+          pointB:
+            RawX: -5237637
+            RawY: -8205107
+          selfPolygonIndex: 1
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 3145726
+          hasOther: 0
+        - pointA:
+            RawX: -5237637
+            RawY: -8205107
+          pointB:
+            RawX: -5237637
+            RawY: -12923699
+          selfPolygonIndex: 1
+          otherPolygonIndex: 5
+          distance:
+            Raw: 3857784
+          width:
+            Raw: 4718588
+          hasOther: 1
+        centroid:
+          RawX: -3664753
+          RawY: -10564345
+        normal:
+        - RawX: 0
+          RawY: -1048575
+        - RawX: 1048576
+          RawY: 0
+        - RawX: 0
+          RawY: 1048575
+        - RawX: -1048577
+          RawY: 0
+        vertsCount: 4
+        index: 1
+      - verts:
+        - RawX: -5761925
+          RawY: -7680819
+        - RawX: -5761925
+          RawY: -3748659
+        - RawX: -10480517
+          RawY: -3748659
+        edges:
+        - pointA:
+            RawX: -5761925
+            RawY: -7680819
+          pointB:
+            RawX: -5761925
+            RawY: -3748659
+          selfPolygonIndex: 2
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 3932158
+          hasOther: 0
+        - pointA:
+            RawX: -5761925
+            RawY: -3748659
+          pointB:
+            RawX: -10480517
+            RawY: -3748659
+          selfPolygonIndex: 2
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -10480517
+            RawY: -3748659
+          pointB:
+            RawX: -5761925
+            RawY: -7680819
+          selfPolygonIndex: 2
+          otherPolygonIndex: 5
+          distance:
+            Raw: 3627910
+          width:
+            Raw: 6142228
+          hasOther: 1
+        centroid:
+          RawX: -7334740
+          RawY: -5059345
+        normal:
+        - RawX: 1048575
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -671280
+          RawY: -805536
+        vertsCount: 3
+        index: 2
+      - verts:
+        - RawX: -11004805
+          RawY: -3224371
+        - RawX: -11004805
+          RawY: -78643
+        - RawX: -15723397
+          RawY: -78643
+        - RawX: -15723397
+          RawY: -4797235
+        - RawX: -14674821
+          RawY: -4797235
+        edges:
+        - pointA:
+            RawX: -11004805
+            RawY: -3224371
+          pointB:
+            RawX: -11004805
+            RawY: -78643
+          selfPolygonIndex: 3
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 3145726
+          hasOther: 0
+        - pointA:
+            RawX: -11004805
+            RawY: -78643
+          pointB:
+            RawX: -15723397
+            RawY: -78643
+          selfPolygonIndex: 3
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -15723397
+            RawY: -78643
+          pointB:
+            RawX: -15723397
+            RawY: -4797235
+          selfPolygonIndex: 3
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -15723397
+            RawY: -4797235
+          pointB:
+            RawX: -14674821
+            RawY: -4797235
+          selfPolygonIndex: 3
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 1048576
+          hasOther: 0
+        - pointA:
+            RawX: -14674821
+            RawY: -4797235
+          pointB:
+            RawX: -11004805
+            RawY: -3224371
+          selfPolygonIndex: 3
+          otherPolygonIndex: 4
+          distance:
+            Raw: 2297438
+          width:
+            Raw: 3992858
+          hasOther: 1
+        centroid:
+          RawX: -13533116
+          RawY: -2164613
+        normal:
+        - RawX: 1048575
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1048577
+          RawY: 0
+        - RawX: 0
+          RawY: -1048576
+        - RawX: 413053
+          RawY: -963792
+        vertsCount: 5
+        index: 3
+      - verts:
+        - RawX: -11004805
+          RawY: -3224371
+        - RawX: -14674821
+          RawY: -4797235
+        - RawX: -14150533
+          RawY: -5321523
+        edges:
+        - pointA:
+            RawX: -14674821
+            RawY: -4797235
+          pointB:
+            RawX: -11004805
+            RawY: -3224371
+          selfPolygonIndex: 4
+          otherPolygonIndex: 3
+          distance:
+            Raw: 2297438
+          width:
+            Raw: 3992858
+          hasOther: 1
+        - pointA:
+            RawX: -14674821
+            RawY: -4797235
+          pointB:
+            RawX: -14150533
+            RawY: -5321523
+          selfPolygonIndex: 4
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -11004805
+            RawY: -3224371
+          pointB:
+            RawX: -14150533
+            RawY: -5321523
+          selfPolygonIndex: 4
+          otherPolygonIndex: 0
+          distance:
+            Raw: 6506016
+          width:
+            Raw: 3780694
+          hasOther: 1
+        centroid:
+          RawX: -13276673
+          RawY: -4447695
+        normal:
+        - RawX: -413054
+          RawY: 963791
+        - RawX: -741455
+          RawY: -741455
+        - RawX: 581644
+          RawY: -872466
+        vertsCount: 3
+        index: 4
+      - verts:
+        - RawX: -5237637
+          RawY: -8205107
+        - RawX: -5761925
+          RawY: -7680819
+        - RawX: -10480517
+          RawY: -3748659
+        - RawX: -5761925
+          RawY: -13447987
+        - RawX: -5237637
+          RawY: -12923699
+        edges:
+        - pointA:
+            RawX: -5237637
+            RawY: -8205107
+          pointB:
+            RawX: -5761925
+            RawY: -7680819
+          selfPolygonIndex: 5
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -10480517
+            RawY: -3748659
+          pointB:
+            RawX: -5761925
+            RawY: -7680819
+          selfPolygonIndex: 5
+          otherPolygonIndex: 2
+          distance:
+            Raw: 3627910
+          width:
+            Raw: 6142228
+          hasOther: 1
+        - pointA:
+            RawX: -5761925
+            RawY: -13447987
+          pointB:
+            RawX: -10480517
+            RawY: -3748659
+          selfPolygonIndex: 5
+          otherPolygonIndex: 0
+          distance:
+            Raw: 4069736
+          width:
+            Raw: 10786192
+          hasOther: 1
+        - pointA:
+            RawX: -5761925
+            RawY: -13447987
+          pointB:
+            RawX: -5237637
+            RawY: -12923699
+          selfPolygonIndex: 5
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 741455
+          hasOther: 0
+        - pointA:
+            RawX: -5237637
+            RawY: -8205107
+          pointB:
+            RawX: -5237637
+            RawY: -12923699
+          selfPolygonIndex: 5
+          otherPolygonIndex: 1
+          distance:
+            Raw: 3857784
+          width:
+            Raw: 4718588
+          hasOther: 1
+        centroid:
+          RawX: -7027794
+          RawY: -8674249
+        normal:
+        - RawX: 741455
+          RawY: 741455
+        - RawX: 671280
+          RawY: 805536
+        - RawX: -942908
+          RawY: -458712
+        - RawX: 741455
+          RawY: -741455
+        - RawX: 1048576
+          RawY: 0
+        vertsCount: 5
+        index: 5
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 1
+    indicsCount: 4
+    graph:
+      polygons:
+      - verts:
+        - RawX: -7596933
+          RawY: 9882829
+        - RawX: -7596933
+          RawY: 14601421
+        - RawX: -12315525
+          RawY: 14601421
+        - RawX: -12315525
+          RawY: 9882829
+        edges:
+        - pointA:
+            RawX: -7596933
+            RawY: 9882829
+          pointB:
+            RawX: -7596933
+            RawY: 14601421
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -7596933
+            RawY: 14601421
+          pointB:
+            RawX: -12315525
+            RawY: 14601421
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -12315525
+            RawY: 14601421
+          pointB:
+            RawX: -12315525
+            RawY: 9882829
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -12315525
+            RawY: 9882829
+          pointB:
+            RawX: -7596933
+            RawY: 9882829
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        centroid:
+          RawX: -9956116
+          RawY: 12241985
+        normal:
+        - RawX: 1048576
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1048577
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        vertsCount: 4
+        index: 0
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 1
+    indicsCount: 4
+    graph:
+      polygons:
+      - verts:
+        - RawX: 27792507
+          RawY: 21155021
+        - RawX: 27792507
+          RawY: 25873613
+        - RawX: -4975493
+          RawY: 25873613
+        - RawX: -4975493
+          RawY: 21155021
+        edges:
+        - pointA:
+            RawX: 27792507
+            RawY: 21155021
+          pointB:
+            RawX: 27792507
+            RawY: 25873613
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 27792507
+            RawY: 25873613
+          pointB:
+            RawX: -4975493
+            RawY: 25873613
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 32767984
+          hasOther: 0
+        - pointA:
+            RawX: -4975493
+            RawY: 25873613
+          pointB:
+            RawX: -4975493
+            RawY: 21155021
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -4975493
+            RawY: 21155021
+          pointB:
+            RawX: 27792507
+            RawY: 21155021
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 32767984
+          hasOther: 0
+        centroid:
+          RawX: 11407668
+          RawY: 23512589
+        normal:
+        - RawX: 1048576
+          RawY: 0
+        - RawX: 0
+          RawY: 1048562
+        - RawX: -1048577
+          RawY: 0
+        - RawX: 0
+          RawY: -1048563
+        vertsCount: 4
+        index: 0
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 1
+    indicsCount: 4
+    graph:
+      polygons:
+      - verts:
+        - RawX: 2888827
+          RawY: 4115661
+        - RawX: 2888827
+          RawY: 8834253
+        - RawX: -1829765
+          RawY: 8834253
+        - RawX: -1829765
+          RawY: 4115661
+        edges:
+        - pointA:
+            RawX: 2888827
+            RawY: 4115661
+          pointB:
+            RawX: 2888827
+            RawY: 8834253
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 2888827
+            RawY: 8834253
+          pointB:
+            RawX: -1829765
+            RawY: 8834253
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -1829765
+            RawY: 8834253
+          pointB:
+            RawX: -1829765
+            RawY: 4115661
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: -1829765
+            RawY: 4115661
+          pointB:
+            RawX: 2888827
+            RawY: 4115661
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        centroid:
+          RawX: 529524
+          RawY: 6474883
+        normal:
+        - RawX: 1048576
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1048577
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        vertsCount: 4
+        index: 0
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 1
+    indicsCount: 4
+    graph:
+      polygons:
+      - verts:
+        - RawX: 8655995
+          RawY: -22623027
+        - RawX: 8655995
+          RawY: -17904435
+        - RawX: 3937403
+          RawY: -17904435
+        - RawX: 3937403
+          RawY: -22623027
+        edges:
+        - pointA:
+            RawX: 8655995
+            RawY: -22623027
+          pointB:
+            RawX: 8655995
+            RawY: -17904435
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 8655995
+            RawY: -17904435
+          pointB:
+            RawX: 3937403
+            RawY: -17904435
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 3937403
+            RawY: -17904435
+          pointB:
+            RawX: 3937403
+            RawY: -22623027
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 3937403
+            RawY: -22623027
+          pointB:
+            RawX: 8655995
+            RawY: -22623027
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        centroid:
+          RawX: 6296627
+          RawY: -20263501
+        normal:
+        - RawX: 1048576
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1048577
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        vertsCount: 4
+        index: 0
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 1
+    indicsCount: 4
+    graph:
+      polygons:
+      - verts:
+        - RawX: 9180283
+          RawY: 12766413
+        - RawX: 9180283
+          RawY: 15387853
+        - RawX: 4461691
+          RawY: 15387853
+        - RawX: 4461691
+          RawY: 12766413
+        edges:
+        - pointA:
+            RawX: 9180283
+            RawY: 12766413
+          pointB:
+            RawX: 9180283
+            RawY: 15387853
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 2621440
+          hasOther: 0
+        - pointA:
+            RawX: 9180283
+            RawY: 15387853
+          pointB:
+            RawX: 4461691
+            RawY: 15387853
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 4461691
+            RawY: 15387853
+          pointB:
+            RawX: 4461691
+            RawY: 12766413
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 2621440
+          hasOther: 0
+        - pointA:
+            RawX: 4461691
+            RawY: 12766413
+          pointB:
+            RawX: 9180283
+            RawY: 12766413
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        centroid:
+          RawX: 6820924
+          RawY: 14077004
+        normal:
+        - RawX: 1048575
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1048575
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        vertsCount: 4
+        index: 0
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 1
+    indicsCount: 4
+    graph:
+      polygons:
+      - verts:
+        - RawX: 7083131
+          RawY: -10826547
+        - RawX: 7083131
+          RawY: -8991539
+        - RawX: 5510267
+          RawY: -8991539
+        - RawX: 5510267
+          RawY: -10826547
+        edges:
+        - pointA:
+            RawX: 7083131
+            RawY: -10826547
+          pointB:
+            RawX: 7083131
+            RawY: -8991539
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 1835007
+          hasOther: 0
+        - pointA:
+            RawX: 7083131
+            RawY: -8991539
+          pointB:
+            RawX: 5510267
+            RawY: -8991539
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 1572863
+          hasOther: 0
+        - pointA:
+            RawX: 5510267
+            RawY: -8991539
+          pointB:
+            RawX: 5510267
+            RawY: -10826547
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 1835007
+          hasOther: 0
+        - pointA:
+            RawX: 5510267
+            RawY: -10826547
+          pointB:
+            RawX: 7083131
+            RawY: -10826547
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 1572863
+          hasOther: 0
+        centroid:
+          RawX: 6296662
+          RawY: -9908988
+        normal:
+        - RawX: 1048575
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1048576
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        vertsCount: 4
+        index: 0
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 1
+    indicsCount: 4
+    graph:
+      polygons:
+      - verts:
+        - RawX: 13112443
+          RawY: -2437939
+        - RawX: 13112443
+          RawY: 2280653
+        - RawX: 8393851
+          RawY: 2280653
+        - RawX: 8393851
+          RawY: -2437939
+        edges:
+        - pointA:
+            RawX: 13112443
+            RawY: -2437939
+          pointB:
+            RawX: 13112443
+            RawY: 2280653
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 13112443
+            RawY: 2280653
+          pointB:
+            RawX: 8393851
+            RawY: 2280653
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 8393851
+            RawY: 2280653
+          pointB:
+            RawX: 8393851
+            RawY: -2437939
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 8393851
+            RawY: -2437939
+          pointB:
+            RawX: 13112443
+            RawY: -2437939
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        centroid:
+          RawX: 10753024
+          RawY: -78643
+        normal:
+        - RawX: 1048576
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1048577
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        vertsCount: 4
+        index: 0
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 1
+    indicsCount: 4
+    graph:
+      polygons:
+      - verts:
+        - RawX: 21501051
+          RawY: 4377805
+        - RawX: 21501051
+          RawY: 9096397
+        - RawX: 16782459
+          RawY: 9096397
+        - RawX: 16782459
+          RawY: 4377805
+        edges:
+        - pointA:
+            RawX: 21501051
+            RawY: 4377805
+          pointB:
+            RawX: 21501051
+            RawY: 9096397
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 21501051
+            RawY: 9096397
+          pointB:
+            RawX: 16782459
+            RawY: 9096397
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 16782459
+            RawY: 9096397
+          pointB:
+            RawX: 16782459
+            RawY: 4377805
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 16782459
+            RawY: 4377805
+          pointB:
+            RawX: 21501051
+            RawY: 4377805
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        centroid:
+          RawX: 19141537
+          RawY: 6737024
+        normal:
+        - RawX: 1048576
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1048577
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        vertsCount: 4
+        index: 0
+  - nodes: []
+    boundaryEdgeLoopIndex: 0
+    edgeLoops: []
+    corners: []
+    indices: 
+    indiceCountsOfPolygons: 
+    polygonCount: 1
+    indicsCount: 4
+    graph:
+      polygons:
+      - verts:
+        - RawX: 21763195
+          RawY: -19215155
+        - RawX: 21763195
+          RawY: -14496563
+        - RawX: 17044603
+          RawY: -14496563
+        - RawX: 17044603
+          RawY: -19215155
+        edges:
+        - pointA:
+            RawX: 21763195
+            RawY: -19215155
+          pointB:
+            RawX: 21763195
+            RawY: -14496563
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 21763195
+            RawY: -14496563
+          pointB:
+            RawX: 17044603
+            RawY: -14496563
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 17044603
+            RawY: -14496563
+          pointB:
+            RawX: 17044603
+            RawY: -19215155
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        - pointA:
+            RawX: 17044603
+            RawY: -19215155
+          pointB:
+            RawX: 21763195
+            RawY: -19215155
+          selfPolygonIndex: 0
+          otherPolygonIndex: 0
+          distance:
+            Raw: 0
+          width:
+            Raw: 4718588
+          hasOther: 0
+        centroid:
+          RawX: 19403678
+          RawY: -16855668
+        normal:
+        - RawX: 1048576
+          RawY: 0
+        - RawX: 0
+          RawY: 1048576
+        - RawX: -1048577
+          RawY: 0
+        - RawX: 0
+          RawY: -1048577
+        vertsCount: 4
+        index: 0
+  xCount: 209
+  yCount: 16
+  zCount: 207

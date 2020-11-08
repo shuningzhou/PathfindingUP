@@ -1,0 +1,19 @@
+{
+    "name": "com.socketweaver.pathfinding",
+    "displayName": "Pathfinding",
+    "version": "0.0.1",
+    "unity": "2018.4",
+    "description": "Pathfinding",
+    "keywords": [
+        "Physics",
+        "Fixed point number",
+        "Networking"
+    ],
+    "category": "Pathfinding",
+    "dependencies": {
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/shuningzhou/PathfindingUP.git"
+    }
+}
