@@ -8,24 +8,53 @@ namespace Parallel.Pathfinding
     [RequireComponent(typeof(ParallelTransform))]
     public class PNavMeshAgent : MonoBehaviour
     {
-        public Fix64 movementSpeed = Fix64.FromDivision(1, 1);
+        public bool physicsBasedMovement = false;
+        public Fix64 movementSpeed = Fix64.FromDivision(5, 1);
+        public bool rotate = false;
+        public Fix64 rotationSpeed = Fix64.FromDivision(540, 1);
         public Fix64 stopDistance = Fix64.FromDivision(1, 10);
-        public Fix64 width = Fix64.FromDivision(1, 10);
+
+        public bool debug = false;
+        public int iterationLimit = 50;
+        public List<Fix64Vec2> _waypoints = new List<Fix64Vec2>();
 
         PNavMeshManager _navMeshManager;
         ParallelTransform _pTransform;
+        ParallelRigidbody3D _pRigidbody;
 
         Fix64Vec3 _destination;
         PNavMeshPath _path;
-
-        public bool debug = false;
-        public bool continuous = false;
-        public List<Fix64Vec2> _waypoints = new List<Fix64Vec2>();
 
         void Start()
         {
             _navMeshManager = FindObjectOfType<PNavMeshManager>();
             _pTransform = GetComponent<ParallelTransform>();
+
+            if(physicsBasedMovement)
+            {
+                _pRigidbody = GetComponent<ParallelRigidbody3D>();
+                if(_pRigidbody == null)
+                {
+                    Debug.LogError("ParallelRigidbody3D not found");
+                }
+            }
+        }
+
+        public Fix64Vec3 CurrentWaypoint
+        {
+            get
+            {
+                if (_waypoints.Count > 0)
+                {
+                    Fix64Vec2 currentWaypoint = _waypoints[_currentWaypointTargetIndex];
+                    Fix64Vec3 currentWaypoint3D = new Fix64Vec3(currentWaypoint.x, _pTransform.position.y, currentWaypoint.y);
+                    return currentWaypoint3D;
+                }
+                else
+                {
+                    return Fix64Vec3.zero;
+                }
+            }
         }
 
         private void OnDrawGizmos()
@@ -147,7 +176,7 @@ namespace Parallel.Pathfinding
 
                     if(!debug)
                     {
-                        int limit = 50;
+                        int limit = iterationLimit;
                         while (!_finishedProcessing)
                         {
                             if (limit < 0)
@@ -273,7 +302,7 @@ namespace Parallel.Pathfinding
 
             PNavPolygon currentPolygon = _path.island.graph.polygons[polygonIndex];
 
-            PNavEdge edge = _path.FindEdge(_previousPolygon, currentPolygon, width);
+            PNavEdge edge = _path.FindEdge(_previousPolygon, currentPolygon, Fix64.zero);
 
             if(edge == null)
             {
@@ -287,8 +316,8 @@ namespace Parallel.Pathfinding
             Fix64Vec2 ab = edge.pointB - edge.pointA;
             Fix64Vec2 ba = edge.pointA - edge.pointB;
 
-            Fix64Vec2 pa = edge.pointA + ab.normalized * width;
-            Fix64Vec2 pb = edge.pointB + ba.normalized * width;
+            Fix64Vec2 pa = edge.pointA;
+            Fix64Vec2 pb = edge.pointB;
             Fix64Vec2 vA = pa - pos;
             Fix64Vec2 vB = pb - pos;
             Fix64 c = Fix64Vec2.Cross(vA, vB);
@@ -391,6 +420,7 @@ namespace Parallel.Pathfinding
         }
 
         int _currentWaypointTargetIndex = 0;
+
         public void Move(Fix64 deltaTime)
         {
             //using (new SProfiler($"move"))
@@ -400,15 +430,26 @@ namespace Parallel.Pathfinding
                     Fix64Vec2 currentWaypoint = _waypoints[_currentWaypointTargetIndex];
                     Fix64Vec3 currentWaypoint3D = new Fix64Vec3(currentWaypoint.x, _pTransform.position.y, currentWaypoint.y);
 
-                    //check if we have reached the waypoint
-                    Fix64 distance = Fix64Vec3.Distance(_pTransform.position, currentWaypoint3D);
+                    Fix64Vec3 direction = currentWaypoint3D - _pTransform.position;
+                    direction = new Fix64Vec3(direction.x, Fix64.zero, direction.z);
+                    direction = direction.normalized;
+                    Fix64 distanceToDestination = Fix64Vec3.Distance(currentWaypoint3D, _pTransform.position);
 
-                    if (distance > stopDistance)
+                    if (distanceToDestination > stopDistance)
                     {
-                        Fix64Vec3 direction = currentWaypoint3D - _pTransform.position;
-                        Fix64 stepDistance = movementSpeed * Fix64.FromDivision(2, 100);
-                        stepDistance = Fix64Math.Min(distance, stepDistance);
-                        _pTransform.position += direction.normalized * stepDistance;
+                        if(physicsBasedMovement)
+                        {
+                            MoveByPhysics(distanceToDestination, direction, deltaTime);
+                        }
+                        else
+                        {
+                            Move(distanceToDestination, direction, deltaTime);
+                        }
+
+                        if(rotate)
+                        {
+                            RotateToTarget(direction, deltaTime);
+                        }
                     }
                     else
                     {
@@ -420,11 +461,45 @@ namespace Parallel.Pathfinding
                             // DONE
                             _waypoints.Clear();
                             _currentWaypointTargetIndex = 0;
+                            Stop();
                         }
                     }
                 }
             }
         }
+
+        void RotateToTarget(Fix64Vec3 direction, Fix64 deltaTime)
+        {
+            Fix64Quat newRotation = Fix64Quat.LookRotation(direction, Fix64Vec3.up);
+            newRotation = Fix64Quat.Slerp(_pTransform.rotation, newRotation, rotationSpeed * Fix64.DegreeToRad * deltaTime);
+            _pTransform.rotation = newRotation;
+        }
+
+        void Move(Fix64 distanceToDestination, Fix64Vec3 direction, Fix64 deltaTime)
+        {
+            Fix64 stepDistance = movementSpeed * deltaTime;
+            stepDistance = Fix64Math.Min(distanceToDestination, stepDistance);
+            _pTransform.position += direction.normalized * stepDistance;
+        }
+
+        void MoveByPhysics(Fix64 distanceToDestination, Fix64Vec3 direction, Fix64 deltaTime)
+        {
+            Fix64 movementSpeedLimit = distanceToDestination / deltaTime;
+            Fix64 clampedSpeed = Fix64Math.Clamp(movementSpeed, Fix64.zero, movementSpeedLimit);
+            Fix64Vec3 velocity = direction * clampedSpeed;//Fix64Vec3.ClampLength(direction * movementSpeed, clampedSpeed);
+
+            _pRigidbody.LinearVelocity = velocity;
+        }
+
+        void Stop()
+        {
+            if(physicsBasedMovement)
+            {
+                _pRigidbody.LinearVelocity = Fix64Vec3.zero;
+                _pRigidbody.AngularVelocity = Fix64Vec3.zero;
+            }
+        }
+
         private void FixedUpdate()
         {
             if(!debug)
@@ -432,37 +507,5 @@ namespace Parallel.Pathfinding
                Move(Fix64.FromDivision(2, 100));
             }
         }
-
-        /*
-        private void Update()
-        {
-            if (_path.Status == ParallelNavMeshPathStatus.Valid)
-            {
-                Fix64Vec2 pos2D = new Fix64Vec2(_pTransform.position.x, _pTransform.position.z);
-                Fix64Vec2 cornerPos2D = new Fix64Vec2(_nextCorner.x, _nextCorner.z);
-                distanceToNextCorner = Fix64Vec2.Distance(pos2D, cornerPos2D);
-
-                if (_nextCorner == Fix64Vec3.zero || distanceToNextCorner < stopDistance)
-                {
-                    //get next corner
-                    bool foundNextCorner = _path.NextCorner(_pTransform.position, width, ref _nextCorner, ref _nextPolygonIndex);
-                    _nextCorner = new Fix64Vec3(_nextCorner.x, _pTransform.position.y, _nextCorner.z);
-
-                    if (!foundNextCorner)
-                    {
-                        Debug.Log("Failed to find the next corner, try calculate a new path");
-                        //UpdatePath();
-                    }
-                }
-                else
-                {
-                    //move towards the corner
-                    Fix64Vec3 direction = _nextCorner - _pTransform.position;
-                    _pTransform.position = transform.position + movementSpeed * direction.normalized * Time.deltaTime;
-                }
-            }
-        }
-        */
     }
-
 }
