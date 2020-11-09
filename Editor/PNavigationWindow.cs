@@ -22,6 +22,8 @@ namespace Parallel.Pathfinding
         bool drawPolygon = true;
         bool drawCorner = false;
 
+        bool debugDraw = false;
+
         [MenuItem("Parallel/Navigation")]
         public static void ShowWindow()
         {
@@ -51,6 +53,11 @@ namespace Parallel.Pathfinding
         void OnSceneGUI(SceneView sceneView)
         {
             if (Event.current.type != EventType.Repaint)
+            {
+                return;
+            }
+
+            if(!debugDraw)
             {
                 return;
             }
@@ -121,11 +128,19 @@ namespace Parallel.Pathfinding
                 GUILayout.EndHorizontal();
 
                 GUILayout.BeginHorizontal();
+                pNavMesh.edgeGap = EditorGUILayout.IntField("Edge Gap", pNavMesh.edgeGap);
+                GUILayout.EndHorizontal();
+
+                GUILayout.BeginHorizontal();
                 EditorGUILayout.PropertyField(so.FindProperty("gridSize"));
                 GUILayout.EndHorizontal();
 
                 GUILayout.BeginHorizontal();
-                EditorGUILayout.PropertyField(so.FindProperty("floorLevel"));
+                EditorGUILayout.PropertyField(so.FindProperty("worldOrigin"));
+                GUILayout.EndHorizontal();
+
+                GUILayout.BeginHorizontal();
+                EditorGUILayout.PropertyField(so.FindProperty("worldSize"));
                 GUILayout.EndHorizontal();
 
                 so.ApplyModifiedProperties();
@@ -146,6 +161,10 @@ namespace Parallel.Pathfinding
                 if(!pNavMesh.saved)
                 {
                     //debug
+                    GUILayout.BeginHorizontal();
+                    debugDraw = EditorGUILayout.Toggle("Debug Draw", debugDraw);
+                    GUILayout.EndHorizontal();
+
                     GUILayout.BeginHorizontal();
                     drawEdgeLoop = EditorGUILayout.Toggle("Draw Edge Loop", drawEdgeLoop);
                     drawWalkAble = EditorGUILayout.Toggle("Draw Walkable", drawWalkAble);

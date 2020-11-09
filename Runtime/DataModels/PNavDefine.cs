@@ -24,6 +24,7 @@ namespace Parallel.Pathfinding
         LeftEdge = 1,
         RightEdge = 2,
         TopEdge = 4,
-        BottomEdge = 8
+        BottomEdge = 8,
+        CornerEdge = 16
     }
 }

@@ -7,35 +7,59 @@ namespace Parallel.Pathfinding
 {
     public class NavMeshAStarNode : BaseAStarNode<PNavPolygon>
     {
+        public Fix64Vec2 startPoint = Fix64Vec2.zero;
+        //Fix64Vec2 nextStartPoint = Fix64Vec2.zero;
+        public Fix64Vec2 endPoint = Fix64Vec2.zero;
+        public bool isLastNode = false;
+
         public NavMeshAStarNode(PNavPolygon polygon) : base(polygon)
         {
 
         }
 
-        public override bool Equals(PNavPolygon other)
+        public override Fix64 CalculateG(BaseAStarNode<PNavPolygon> other)
         {
-            return UserObject.index == other.index;
-        }
+            NavMeshAStarNode otherNode = (NavMeshAStarNode)other;
 
-        public override Fix64 CalculateG(PNavPolygon other)
-        {
             Fix64 result = Fix64.zero;
 
-            foreach (PNavEdge edge in other.edges)
+            foreach (PNavEdge edge in other.UserObject.edges)
             {
                 if (edge.hasOther && edge.otherPolygonIndex == UserObject.index)
                 {
-                    result = edge.distance;
+                    result = Fix64Vec2.DistanceToSegment(startPoint, edge.pointA, edge.pointB, out otherNode.startPoint);
+
+                    if(otherNode.isLastNode)
+                    {
+                        result = result + Fix64Vec2.Distance(otherNode.endPoint, otherNode.startPoint);
+                    }
+                    //result = edge.distance;
                 }
             }
 
             return result;
         }
 
-        public override Fix64 CalculateH(PNavPolygon other)
+        public override Fix64 CalculateH(BaseAStarNode<PNavPolygon> other)
         {
-            Fix64 result = Fix64Vec2.Distance(UserObject.centroid, other.centroid);
-            return result;
+            NavMeshAStarNode otherNode = (NavMeshAStarNode)other;
+            if(otherNode.isLastNode)
+            {
+                return Fix64Vec2.Distance(startPoint, otherNode.endPoint);
+            }
+            else
+            {
+                return Fix64Vec2.Distance(startPoint, otherNode.UserObject.centroid);
+            }
+
+            //Fix64 result = Fix64Vec2.Distance(UserObject.centroid, other.UserObject.centroid);
+            //if (other)
+            //return result;
+        }
+
+        public override bool Equals(BaseAStarNode<PNavPolygon> other)
+        {
+            return UserObject.index == other.UserObject.index;
         }
 
         public void Reset()
@@ -44,7 +68,10 @@ namespace Parallel.Pathfinding
             G = Fix64.zero;
             F = Fix64.zero;
             H = Fix64.zero;
+            startPoint = Fix64Vec2.zero;
+            endPoint = Fix64Vec2.zero;
             Index = 0;
+            isLastNode = false;
         }
     }
 

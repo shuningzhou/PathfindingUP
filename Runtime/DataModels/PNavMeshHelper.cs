@@ -16,15 +16,56 @@ namespace Parallel.Pathfinding
         static PNavPoint BOTTOMLEFT = new PNavPoint(-1, -1);
         static PNavPoint BOTTOMRIGHT = new PNavPoint(1, -1);
 
+        public static void DetectEdgeCorner(PNavColumn[,] columns, PNavPoint pointMax, PNavIsland island)
+        {
+            foreach (PNavNode node in island.nodes)
+            {
+                if (node.IsInner)
+                {
+                    bool topEdge = isEdgeNode(node.point, pointMax, TOP, columns);
+                    bool botEdge = isEdgeNode(node.point, pointMax, BOTTOM, columns);
+                    bool leftEdge = isEdgeNode(node.point, pointMax, LEFT, columns);
+                    bool rightEdge = isEdgeNode(node.point, pointMax, RIGHT, columns);
+
+                    bool topLeftEdge = isEdgeNode(node.point, pointMax, TOPLEFT, columns);
+                    bool topRightEdge = isEdgeNode(node.point, pointMax, TOPRIGHT, columns);
+                    bool botLeftEdge = isEdgeNode(node.point, pointMax, BOTTOMLEFT, columns);
+                    bool botRightEdge = isEdgeNode(node.point, pointMax, BOTTOMRIGHT, columns);
+
+                    if(topEdge && leftEdge && !topLeftEdge)
+                    {
+                        node.type = node.type | (int)ParallelNavIslandNodeType.CornerEdge;
+                        continue;
+                    }
+
+                    if(topEdge && rightEdge && !topRightEdge)
+                    {
+                        node.type = node.type | (int)ParallelNavIslandNodeType.CornerEdge;
+                        continue;
+                    }
+
+                    if(botEdge && leftEdge && ! botLeftEdge)
+                    {
+                        node.type = node.type | (int)ParallelNavIslandNodeType.CornerEdge;
+                        continue;
+                    }
+
+                    if(botEdge && rightEdge && ! botRightEdge)
+                    {
+                        node.type = node.type | (int)ParallelNavIslandNodeType.CornerEdge;
+                        continue;
+                    }
+                }
+            }
+        }
+
         public static void ApplyEdgeGap(PNavColumn[,] columns, PNavPoint pointMax, PNavIsland island, int edgeGap)
         {
             foreach (PNavNode node in island.nodes)
             {
                 if (node.IsInner)
                 {
-
-                    // remove narrow path
-
+                    //===remove narrow path
                     // check top and bot
                     bool top2Valid = isInnerNode(node.point, pointMax, TOP, 2, columns);
                     bool top1Valid = isInnerNode(node.point, pointMax, TOP, 1, columns);
@@ -426,6 +467,26 @@ namespace Parallel.Pathfinding
             }
 
             return valid;
+        }
+
+        static bool isEdgeNode(PNavPoint point, PNavPoint max, PNavPoint delta, PNavColumn[,] columns)
+        {
+            PNavPoint pOut;
+            bool valid = PNavMeshHelper.GetPoint(point, max, delta, out pOut);
+
+            if (valid)
+            {
+                PNavNode n = columns[pOut.x, pOut.z].SurfaceNode();
+
+                if (n == null)
+                {
+                    return false;
+                }
+
+                return n.IsLeftEdge || n.IsRghtEdge || n.IsBackEdge || n.IsFrontEdge;
+            }
+
+            return false;
         }
 
         public static bool GetLeft(int x, int z, int maxX, int maxZ, out int xOut, out int zOout)

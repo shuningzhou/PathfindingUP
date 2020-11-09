@@ -24,28 +24,10 @@ namespace Parallel.Pathfinding
                 }
             }
 
-            // get world size
-            Fix64Vec3 lower = Fix64Vec3.zero;
-            Fix64Vec3 upper = Fix64Vec3.zero;
-            Parallel3D.GetWorldSize(ref lower, ref upper);
-
-            lower = new Fix64Vec3(
-                lower.x,
-                Fix64Math.Max(pNavMesh.floorLevel, lower.y),
-                lower.z);
-
-            upper = new Fix64Vec3(
-                upper.x,
-                Fix64Math.Min(pNavMesh.ceilingLevel, upper.y),
-                upper.z);
-
-            pNavMesh.worldLowerBound = lower;
-            pNavMesh.worldUpperBound = upper;
-
             // make grid
-            pNavMesh.xCount = (int)((upper.x - lower.x) / pNavMesh.gridSize.x) + 1;
-            pNavMesh.yCount = (int)((upper.y - lower.y) / pNavMesh.gridSize.y) + 1;
-            pNavMesh.zCount = (int)((upper.z - lower.z) / pNavMesh.gridSize.z) + 1;
+            pNavMesh.xCount = (int)((pNavMesh.worldSize.x) / pNavMesh.gridSize.x);
+            pNavMesh.yCount = (int)((pNavMesh.worldSize.y) / pNavMesh.gridSize.y);
+            pNavMesh.zCount = (int)((pNavMesh.worldSize.z) / pNavMesh.gridSize.z);
 
             PNavColumn[,] columns = new PNavColumn[pNavMesh.xCount, pNavMesh.zCount];
 
@@ -99,9 +81,9 @@ namespace Parallel.Pathfinding
             Fix64Vec3 size = pNavMesh.gridSize * (Fix64)scale;
             Fix64Vec3 toCenter = Fix64.half * size;
 
-            int scaledXEnd = xEnd / scale + 1;
-            int scaledYEnd = yEnd / scale + 1;
-            int scaledZEnd = zEnd / scale + 1;
+            int scaledXEnd = xEnd / scale;
+            int scaledYEnd = yEnd / scale;
+            int scaledZEnd = zEnd / scale;
 
             for (int x = xStart; x < scaledXEnd; x++)
             {

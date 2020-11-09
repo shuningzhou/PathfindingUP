@@ -86,10 +86,16 @@ namespace Parallel.Pathfinding
                 {
                     NavMeshAStarNode startNode = astart.FindNode(startPolygon.index);
                     NavMeshAStarNode endNode = astart.FindNode(endPolygon.index);
-                    IAStarNode<PNavPolygon> lastNode = null;
+                    NavMeshAStarNode lastNode = null;
 
                     using (new SProfiler("Pathfinding"))
                     {
+                        astart.PrePathFinding();
+
+                        startNode.startPoint = startPosition;
+                        endNode.isLastNode = true;
+                        endNode.endPoint = endPosition;
+
                         lastNode = astart.FindPath(startNode, endNode);
                     }
 
@@ -100,7 +106,7 @@ namespace Parallel.Pathfinding
                     while (lastNode != null)
                     {
                         result.polygonIndexes[startIndex] = lastNode.UserObject.index;
-                        lastNode = lastNode.Parent;
+                        lastNode = (NavMeshAStarNode)lastNode.Parent;
                         startIndex--;
                     }
 

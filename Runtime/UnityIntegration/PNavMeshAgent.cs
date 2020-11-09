@@ -19,7 +19,7 @@ namespace Parallel.Pathfinding
         PNavMeshPath _path;
 
         public bool debug = false;
-
+        public bool continuous = false;
         public List<Fix64Vec2> _waypoints = new List<Fix64Vec2>();
 
         void Start()
@@ -31,11 +31,6 @@ namespace Parallel.Pathfinding
         private void OnDrawGizmos()
         {
             if (!Application.isPlaying)
-            {
-                return;
-            }
-
-            if (!debug)
             {
                 return;
             }
@@ -83,7 +78,7 @@ namespace Parallel.Pathfinding
                         Gizmos.DrawLine(pos3D, left3D);
                         Gizmos.DrawWireSphere(left3D, 0.1f);
 
-                        Gizmos.color = Color.yellow;
+                        Gizmos.color = Color.magenta;
                         Vector3 right3D = new Vector3((float)_minRight.x, 0, (float)_minRight.y);
 
                         Gizmos.DrawLine(pos3D, right3D);
@@ -149,18 +144,22 @@ namespace Parallel.Pathfinding
                     int polygonIndex = _path.polygonIndexes[_pathPolygonIndex];
                     _previousPolygon = _path.island.graph.polygons[polygonIndex];
                     _pathPolygonIndex++;
-                }
 
-                int limit = 20;
-                while (!_finishedProcessing)
-                {
-                    if (limit < 0)
+                    if(!debug)
                     {
-                        Debug.LogError($"Unable to process path {limit}");
-                    }
+                        int limit = 50;
+                        while (!_finishedProcessing)
+                        {
+                            if (limit < 0)
+                            {
+                                Debug.LogError($"Unable to process path {limit}");
+                                break;
+                            }
 
-                    ProcessNextPolygon();
-                    limit--;
+                            ProcessNextPolygon();
+                            limit--;
+                        }
+                    }
                 }
             }
         }
@@ -174,6 +173,10 @@ namespace Parallel.Pathfinding
             _minLeftVector = Fix64Vec2.zero;
             _minRightVector = Fix64Vec2.zero;
             _finishedProcessing = true;
+            _leftPolygonIndex = 0;
+            _rightPolygonIndex = 0;
+            _leftPreviousPolygon = null;
+            _rightPreviousPolygon = null;
         }
 
         int _pathPolygonIndex = 0;
@@ -183,7 +186,12 @@ namespace Parallel.Pathfinding
         Fix64Vec2 _minRight = Fix64Vec2.zero;
         Fix64Vec2 _minLeftVector = Fix64Vec2.zero;
         Fix64Vec2 _minRightVector = Fix64Vec2.zero;
+        int _leftPolygonIndex = 0;
+        PNavPolygon _leftPreviousPolygon = null;
+        int _rightPolygonIndex = 0;
+        PNavPolygon _rightPreviousPolygon = null;
 
+        //http://digestingduck.blogspot.com/2010/03/simple-stupid-funnel-algorithm.html
         void ProcessNextPolygon()
         {
             Debug.Log($"ProcessNextPolygon {_pathPolygonIndex}");
@@ -193,30 +201,65 @@ namespace Parallel.Pathfinding
             {
                 Debug.Log("LAST POLYGON");
 
+                if(_minLeftVector == Fix64Vec2.zero)
+                {
+                    Debug.Log("GO to destination directly");
+                    _waypoints.Add(_path.Destination2D);
+
+                    ResetPathValues();
+                    return;
+                }
+
                 Fix64Vec2 destinationVector = _path.Destination2D - pos;
 
                 bool destinationLeftOfMinLeft = Fix64Vec2.Cross(_minLeftVector, destinationVector) > Fix64.zero;
                 bool destinationRightOfMinRight = Fix64Vec2.Cross(_minRightVector, destinationVector) < Fix64.zero;
 
-                if (destinationLeftOfMinLeft)
+                bool lastRecalculate = false;
+                bool useLeft = true;
+
+                if(destinationLeftOfMinLeft && destinationRightOfMinRight)
                 {
-                    Debug.Log("Go to min left first");
+                    //when both are too be added
+                    //use the one that is closer to pos
+                    Fix64 leftDis = Fix64Vec2.Distance(_minLeft, pos);
+                    Fix64 rightDis = Fix64Vec2.Distance(_minRight, pos);
+
+                    if(leftDis > rightDis)
+                    {
+                        useLeft = false;
+                    }
+                }
+
+                if (destinationLeftOfMinLeft && useLeft)
+                {
                     _waypoints.Add(_minLeft);
-                    _waypoints.Add(_path.Destination2D);
+                    pos = _minLeft;
+                    _pathPolygonIndex = _leftPolygonIndex;
+                    _previousPolygon = _leftPreviousPolygon;
+                    lastRecalculate = true;
                 }
-                else if (destinationRightOfMinRight)
+
+                if (destinationRightOfMinRight && !lastRecalculate)
                 {
-                    Debug.Log("Go to min right first");
                     _waypoints.Add(_minRight);
-                    _waypoints.Add(_path.Destination2D);
+                    pos = _minRight;
+                    _pathPolygonIndex = _rightPolygonIndex;
+                    _previousPolygon = _rightPreviousPolygon;
+                    lastRecalculate = true;
                 }
-                else
+
+                if(!lastRecalculate)
                 {
                     Debug.Log("GO to destination directly");
                     _waypoints.Add(_path.Destination2D);
-                }
 
-                ResetPathValues();
+                    ResetPathValues();
+                }
+                else
+                {
+                    _minLeftVector = Fix64Vec2.zero;
+                }
 
                 return;
             }
@@ -232,11 +275,20 @@ namespace Parallel.Pathfinding
 
             PNavEdge edge = _path.FindEdge(_previousPolygon, currentPolygon, width);
 
+            if(edge == null)
+            {
+                Debug.Log("No Edge found");
+                return;
+            }
+
             _previousPolygon = currentPolygon;
             _pathPolygonIndex++;
 
-            Fix64Vec2 pa = edge.pointA;
-            Fix64Vec2 pb = edge.pointB;
+            Fix64Vec2 ab = edge.pointB - edge.pointA;
+            Fix64Vec2 ba = edge.pointA - edge.pointB;
+
+            Fix64Vec2 pa = edge.pointA + ab.normalized * width;
+            Fix64Vec2 pb = edge.pointB + ba.normalized * width;
             Fix64Vec2 vA = pa - pos;
             Fix64Vec2 vB = pb - pos;
             Fix64 c = Fix64Vec2.Cross(vA, vB);
@@ -260,6 +312,10 @@ namespace Parallel.Pathfinding
                 _minRight = right;
                 _minLeftVector = left - pos;
                 _minRightVector = right - pos;
+                _leftPolygonIndex = _pathPolygonIndex;
+                _rightPolygonIndex = _pathPolygonIndex;
+                _leftPreviousPolygon = _previousPolygon;
+                _rightPreviousPolygon = _previousPolygon;
                 return;
             }
 
@@ -270,84 +326,51 @@ namespace Parallel.Pathfinding
             bool newRightIsLeftToOldLeft = Fix64Vec2.Cross(_minLeftVector, newRightVector) > Fix64.zero;
 
             bool recalculateNewVectors = false;
+
             if (newLeftIsRightToOldRight)
             {
                 //move to old right and recalculate
                 _waypoints.Add(_minRight);
                 pos = _minRight;
+                _pathPolygonIndex = _rightPolygonIndex;
+                _previousPolygon = _rightPreviousPolygon;
                 recalculateNewVectors = true;
             }
 
-            if (newRightIsLeftToOldLeft)
+            if (newRightIsLeftToOldLeft && !recalculateNewVectors)
             {
                 //move to old left and recalculate
                 _waypoints.Add(_minLeft);
                 pos = _minLeft;
+                _pathPolygonIndex = _leftPolygonIndex;
+                _previousPolygon = _leftPreviousPolygon;
                 recalculateNewVectors = true;
             }
 
             if (recalculateNewVectors)
             {
-                vA = pa - pos;
-                vB = pb - pos;
-                c = Fix64Vec2.Cross(vA, vB);
-                left = pb;
-                right = pa;
-
-                if (c > Fix64.zero)
-                {
-                    Debug.Log($"Recalculate POSITVE: pointA is on the right. pA={pa} pB={pb} pos={pos}");
-                }
-                else
-                {
-                    Debug.Log($"Recalculate NEGTIVE: pointA is on the left. pA={pa} pB={pb} pos={pos}");
-                    right = pb;
-                    left = pa;
-                }
-
-                newLeftVector = left - pos;
-                newRightVector = right - pos;
-
-                _minLeft = left;
-                _minRight = right;
-                _minLeftVector = newLeftVector;
-                _minRightVector = newRightVector;
+                _minLeftVector = Fix64Vec2.zero;
+                return;
             }
             else
             {
                 bool newLeftIsOk = Fix64Vec2.Cross(_minLeftVector, newLeftVector) <= Fix64.zero;
                 bool newRightIsOk = Fix64Vec2.Cross(_minRightVector, newRightVector) >= Fix64.zero;
 
-                if (newLeftIsOk)
+                if(newLeftIsOk)
                 {
                     _minLeft = left;
                     _minLeftVector = newLeftVector;
-                }
-                else
-                {
-                    bool intersect = false;
-                    _minLeft = Fix64Vec2.Intersection(pos, _minLeftVector, Fix64.FromDivision(100, 1), left, right, out intersect);
-                    if (!intersect)
-                    {
-                        Debug.Log("failed to find new left intersection");
-                    }
-                    _minLeftVector = _minLeft - pos;
+                    _leftPolygonIndex = _pathPolygonIndex;
+                    _leftPreviousPolygon = _previousPolygon;
                 }
 
-                if (newRightIsOk)
+                if(newRightIsOk)
                 {
                     _minRight = right;
                     _minRightVector = newRightVector;
-                }
-                else
-                {
-                    bool intersect = false;
-                    _minRight = Fix64Vec2.Intersection(pos, _minRightVector, Fix64.FromDivision(100, 1), left, right, out intersect);
-                    if (!intersect)
-                    {
-                        Debug.Log("failed to find new right intersection");
-                    }
-                    _minRightVector = _minRight - pos;
+                    _rightPolygonIndex = _pathPolygonIndex;
+                    _rightPreviousPolygon = _previousPolygon;
                 }
             }
         }
@@ -357,14 +380,14 @@ namespace Parallel.Pathfinding
         {
             //Move();
 
-            //if (Input.GetKeyUp(KeyCode.Space))
-            //{
-            //    Debug.Log("=====Step=====");
-            //    if (_path.Status == ParallelNavMeshPathStatus.Valid)
-            //    {
-            //        ProcessNextPolygon();
-            //    }
-            //}
+            if (Input.GetKeyUp(KeyCode.N))
+            {
+                Debug.Log("=====Step=====");
+                if (_path.Status == ParallelNavMeshPathStatus.Valid)
+                {
+                    ProcessNextPolygon();
+                }
+            }
         }
 
         int _currentWaypointTargetIndex = 0;
@@ -404,9 +427,9 @@ namespace Parallel.Pathfinding
         }
         private void FixedUpdate()
         {
-            if(debug)
+            if(!debug)
             {
-                Move(Fix64.FromDivision(2, 100));
+               Move(Fix64.FromDivision(2, 100));
             }
         }
 

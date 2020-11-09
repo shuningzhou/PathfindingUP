@@ -9,13 +9,6 @@ namespace Parallel.Pathfinding
         Fix64 F { get; set; }
         Fix64 G { get; set; }
         Fix64 H { get; set; }
-
-        T UserObject { get; set; }
-        IAStarNode<T> Parent { get; set; }
-
-        bool Equals(T other);
-        Fix64 CalculateG(T other);
-        Fix64 CalculateH(T other);
     }
 
     public abstract class BaseAStarNode<T> : IIndexedObject, IAStarNode<T>
@@ -25,21 +18,21 @@ namespace Parallel.Pathfinding
         public Fix64 H { get; set; }
 
         public T UserObject { get; set; }
-        public IAStarNode<T> Parent { get; set; }
+        public BaseAStarNode<T> Parent { get; set; }
 
         public BaseAStarNode(T userObject)
         {
             UserObject = userObject;
         }
 
-        public abstract bool Equals(T other);
-        public abstract Fix64 CalculateG(T other);
-        public abstract Fix64 CalculateH(T other);
+        public abstract bool Equals(BaseAStarNode<T> other);
+        public abstract Fix64 CalculateG(BaseAStarNode<T> other);
+        public abstract Fix64 CalculateH(BaseAStarNode<T> other);
 
         public int Index { get; set; }
     }
 
-    public abstract class BaseAStar<T, N> : IComparer<T> where T : IIndexedObject, IAStarNode<N>
+    public abstract class BaseAStar<T, N> : IComparer<T> where T : BaseAStarNode<N>, IIndexedObject
     {
         HashSet<T> openSet;
         HashSet<T> clostSet;
@@ -61,13 +54,12 @@ namespace Parallel.Pathfinding
 
         public T FindPath(T start, T end)
         {
-            PrePathFinding();
             openSet.Clear();
             clostSet.Clear();
             sortedQueue.Clear();
 
             start.G = Fix64.zero;
-            start.H = start.CalculateH(end.UserObject);
+            start.H = start.CalculateH(end);
             start.F = start.G + start.H;
 
             openSet.Add(start);
@@ -95,7 +87,7 @@ namespace Parallel.Pathfinding
                         continue;
                     }
 
-                    Fix64 tentativeG = currentNode.G + child.CalculateG(currentNode.UserObject);
+                    Fix64 tentativeG = currentNode.G + currentNode.CalculateG(child);
                     bool shouldUpdate = false;
 
                     if (child.G == Fix64.zero)
@@ -110,7 +102,7 @@ namespace Parallel.Pathfinding
                     if (shouldUpdate)
                     {
                         child.G = tentativeG;
-                        child.H = child.CalculateH(end.UserObject);
+                        child.H = child.CalculateH(end);
                         child.F = child.G + child.H;
                         child.Parent = currentNode;
                     }

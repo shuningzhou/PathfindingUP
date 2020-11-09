@@ -32,6 +32,16 @@ namespace Parallel.Pathfinding
                         direction = newDirection;
                         previousNode = node;
                     }
+
+                    PNavNode node1 = edgeLoop.nodes[0];
+                    Vector2 newDirection1 = new Vector2(node1.point.x - previousNode.point.x, node1.point.z - previousNode.point.z).normalized;
+                    float angle1 = Vector2.Angle(newDirection1, direction);
+                    previousNode.angle = angle1;
+
+                    if (angle1 >= 45)
+                    {
+                        previousNode.isCorner = true;
+                    }
                 }
             }
         }

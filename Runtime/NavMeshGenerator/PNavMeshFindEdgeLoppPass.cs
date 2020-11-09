@@ -47,8 +47,8 @@ namespace Parallel.Pathfinding
         {
             using (new SProfiler("Finding Edge Loops"))
             {
-                int maxX = pNavMesh.columns.GetLength(0) - 1;
-                int maxZ = pNavMesh.columns.GetLength(1) - 1;
+                int maxX = pNavMesh.columns.GetLength(0) ;
+                int maxZ = pNavMesh.columns.GetLength(1) ;
                 PNavPoint pointMax = new PNavPoint(maxX, maxZ);
 
                 FindEdgeLoops(pNavMesh.columns, pointMax, pNavMesh);
@@ -168,6 +168,8 @@ namespace Parallel.Pathfinding
 
             node.edgeFlag = 0;
 
+            bool allSurroundingAreInner = true;
+
             for (int i = 0; i < 8; i++)
             {
                 walkables[i] = false;
@@ -179,13 +181,25 @@ namespace Parallel.Pathfinding
                 {
                     PNavNode n = columns[pOut.x, pOut.z].SurfaceNode();
 
-                    if (n != null && n.walkable)
+                    if (n != null )
                     {
+                        if(n.walkable)
+                        {
+                            walkables[i] = true;
+                            node.edgeFlag = (byte)(node.edgeFlag | 1 << i);
+                        }
 
-                        walkables[i] = true;
-                        node.edgeFlag = (byte)(node.edgeFlag | 1 << i);
+                        if(!n.IsInner)
+                        {
+                            allSurroundingAreInner = false;
+                        }
                     }
                 }
+            }
+
+            if(!allSurroundingAreInner)
+            {
+                node.isEdge = true;
             }
 
             if (walkables[0] != walkables[4]) //left and right

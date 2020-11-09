@@ -29,8 +29,8 @@ namespace Parallel.Pathfinding
                         {
                             islandIndex++;
                             islands.Add(island);
-
-                            PNavMeshHelper.ApplyEdgeGap(pNavMesh.columns, pointMax, island, 1);
+                            PNavMeshHelper.DetectEdgeCorner(pNavMesh.columns, pointMax, island);
+                            PNavMeshHelper.ApplyEdgeGap(pNavMesh.columns, pointMax, island, pNavMesh.edgeGap);
 
                             island = new PNavIsland();
                         }
