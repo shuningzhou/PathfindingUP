@@ -16,6 +16,7 @@ namespace Parallel.Pathfinding
 
         public bool debug = false;
         public int iterationLimit = 50;
+        public Fix64 error = Fix64.FromDivision(2, 10);
         public List<Fix64Vec2> _waypoints = new List<Fix64Vec2>();
 
         PNavMeshManager _navMeshManager;
@@ -25,7 +26,7 @@ namespace Parallel.Pathfinding
         Fix64Vec3 _destination;
         PNavMeshPath _path;
 
-        void Start()
+        void Awake()
         {
             _navMeshManager = FindObjectOfType<PNavMeshManager>();
             _pTransform = GetComponent<ParallelTransform>();
@@ -152,6 +153,7 @@ namespace Parallel.Pathfinding
 
         public void UpdatePath()
         {
+            Stop();
             ResetPathValues();
             _waypoints.Clear();
             _currentWaypointTargetIndex = 0;
@@ -165,7 +167,7 @@ namespace Parallel.Pathfinding
 
                 if (_pathPolygonIndex == -1)
                 {
-                    Debug.Log("Already in destination polygon");
+                    //Debug.Log("Already in destination polygon");
                     _waypoints.Add(_path.Destination2D);
                 }
                 else
@@ -181,7 +183,7 @@ namespace Parallel.Pathfinding
                         {
                             if (limit < 0)
                             {
-                                Debug.LogError($"Unable to process path {limit}");
+                                //Debug.LogError($"Unable to process path {limit}");
                                 break;
                             }
 
@@ -223,16 +225,16 @@ namespace Parallel.Pathfinding
         //http://digestingduck.blogspot.com/2010/03/simple-stupid-funnel-algorithm.html
         void ProcessNextPolygon()
         {
-            Debug.Log($"ProcessNextPolygon {_pathPolygonIndex}");
+            //Debug.Log($"ProcessNextPolygon {_pathPolygonIndex}");
             Fix64Vec2 pos = _waypoints[_waypoints.Count - 1];
 
             if (_pathPolygonIndex == 128)
             {
-                Debug.Log("LAST POLYGON");
+                //Debug.Log("LAST POLYGON");
 
                 if(_minLeftVector == Fix64Vec2.zero)
                 {
-                    Debug.Log("GO to destination directly");
+                    //Debug.Log("GO to destination directly");
                     _waypoints.Add(_path.Destination2D);
 
                     ResetPathValues();
@@ -280,7 +282,7 @@ namespace Parallel.Pathfinding
 
                 if(!lastRecalculate)
                 {
-                    Debug.Log("GO to destination directly");
+                    //Debug.Log("GO to destination directly");
                     _waypoints.Add(_path.Destination2D);
 
                     ResetPathValues();
@@ -306,7 +308,7 @@ namespace Parallel.Pathfinding
 
             if(edge == null)
             {
-                Debug.Log("No Edge found");
+                Debug.LogError("No Edge found");
                 return;
             }
 
@@ -316,8 +318,8 @@ namespace Parallel.Pathfinding
             Fix64Vec2 ab = edge.pointB - edge.pointA;
             Fix64Vec2 ba = edge.pointA - edge.pointB;
 
-            Fix64Vec2 pa = edge.pointA;
-            Fix64Vec2 pb = edge.pointB;
+            Fix64Vec2 pa = edge.pointA + ab.normalized * error;
+            Fix64Vec2 pb = edge.pointB + ba.normalized * error;
             Fix64Vec2 vA = pa - pos;
             Fix64Vec2 vB = pb - pos;
             Fix64 c = Fix64Vec2.Cross(vA, vB);
@@ -326,11 +328,11 @@ namespace Parallel.Pathfinding
 
             if (c > Fix64.zero)
             {
-                Debug.Log($"POSITVE: pointA is on the right. pA={pa} pB={pb} pos={pos}");
+                //Debug.Log($"POSITVE: pointA is on the right. pA={pa} pB={pb} pos={pos}");
             }
             else
             {
-                Debug.Log($"NEGTIVE: pointA is on the left. pA={pa} pB={pb} pos={pos}");
+                //Debug.Log($"NEGTIVE: pointA is on the left. pA={pa} pB={pb} pos={pos}");
                 right = pb;
                 left = pa;
             }

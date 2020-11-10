@@ -36,6 +36,9 @@ namespace Parallel.Pathfinding
             result.Status = ParallelNavMeshPathStatus.Invalid;
             result.navMesh = navMesh;
 
+            PNavIsland endIsland = null;
+            PNavIsland startIsland = null;
+
             foreach (PNavIsland island in navMesh.islands)
             {
                 bool foundStart = false;
@@ -56,12 +59,14 @@ namespace Parallel.Pathfinding
                     if (isStart)
                     {
                         startPolygon = polygon;
+                        startIsland = island;
                         foundStart = true;
                     }
 
                     if (isEnd)
                     {
                         endPolygon = polygon;
+                        endIsland = island;
                         foundEnd = true;
                     }
                 }
@@ -78,6 +83,53 @@ namespace Parallel.Pathfinding
                 {
                     break;
                 }
+            }
+
+            if(startPolygon != null && endPolygon == null)
+            {
+                //we find the polygon that is closest to the end position in the start position island
+                sameIsland = true;
+                astart = astartDictionary[startIsland];
+                result.island = startIsland;
+                endPolygon = startIsland.FindNearestPolygong(endPosition);
+            }
+            else if(startPolygon == null && endPolygon != null)
+            {
+                //we find the polygon that is closest to the start position in the end position island
+                sameIsland = true;
+                astart = astartDictionary[endIsland];
+                result.island = endIsland;
+                startPolygon = endIsland.FindNearestPolygong(startPosition);
+            }
+            else if(startPolygon == null && endPolygon == null)
+            {
+                //we find the polygon that is closest to the start position
+                //we then find the polygon that is closest to the end position in the same island
+                Fix64 minStart = Fix64.FromDivision(1000, 1);
+                PNavPolygon minStartPolygon = null;
+                PNavIsland minStartIsland = null;
+
+                foreach (PNavIsland island in navMesh.islands)
+                {
+                    foreach (PNavPolygon polygon in island.graph.polygons)
+                    {
+                        Fix64 dis = Fix64Vec2.Distance(polygon.centroid, startPosition);
+                        if(dis < minStart)
+                        {
+                            minStart = dis;
+                            minStartPolygon = polygon;
+                            minStartIsland = island;
+                        }
+                    }
+                }
+
+
+                sameIsland = true;
+                astart = astartDictionary[minStartIsland];
+                result.island = minStartIsland;
+                startPolygon = minStartPolygon;
+
+                endPolygon = minStartIsland.FindNearestPolygong(endPosition);
             }
 
             if (sameIsland)

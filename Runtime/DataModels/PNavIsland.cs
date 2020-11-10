@@ -29,5 +29,22 @@ namespace Parallel.Pathfinding
             indices = null;
             indiceCountsOfPolygons = null;
         }
+
+        public PNavPolygon FindNearestPolygong(Fix64Vec2 point)
+        {
+            Fix64 min = Fix64.FromDivision(1000, 1);
+            PNavPolygon minPolygon = null;
+            foreach (PNavPolygon polygon in graph.polygons)
+            {
+                Fix64 dis = Fix64Vec2.Distance(polygon.centroid, point);
+                if (dis < min)
+                {
+                    min = dis;
+                    minPolygon = polygon;
+                }
+            }
+
+            return minPolygon;
+        }
     }
 }
